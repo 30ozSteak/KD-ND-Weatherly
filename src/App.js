@@ -14,6 +14,7 @@ class App extends Component {
     super();
     this.state = {
       userLocation: 'Denver',
+      state: 'co',
       time: '',
       date: '',
       CurrentWeather: {},
@@ -22,14 +23,20 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.importLocation();
+  }
+
   importLocation() {
-    const url= `http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.userLocation}.json`
-    
+    let zip = this.state.userLocation;
+    let state = this.state.state;
+    const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${state}/${zip}.json`
+
     fetch(url).then(response => response.json()).then(response => {
+      console.log(response)
       let newWeather = currWeatherData(response)
       this.setState({
         CurrentWeather: newWeather,
-
       })
     }) 
     .catch(error => {
@@ -37,9 +44,12 @@ class App extends Component {
     })
   }
 
-  chooseLocation = (location) => {
-    this.setState( { userLocation: location }, this.importLocation )
-    // console.log(this.state.userLocation)
+  setLocation = (location) => {
+    let newLocation = location
+
+    this.setState( { 
+      userLocation: newLocation 
+    }, this.importLocation())
 
   }
   
@@ -48,7 +58,7 @@ class App extends Component {
     return (
       <div className="App">
         <Welcome />
-        <Search cityLocation={this.chooseLocation} />
+        <Search setLocation={this.setLocation} />
         <SevenHourForecast />
         <TenDayForecast />
         <Card />

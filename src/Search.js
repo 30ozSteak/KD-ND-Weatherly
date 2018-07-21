@@ -9,22 +9,25 @@ class Search extends Component {
     // this.getInput = this.getInput.bind(this)
   }
 
-  userInput = (event) => {
-    this.setState( {userInput: event.target.value} )
-    console.log(this.state.userInput)
-  }
-
   render(){
     return (
-      <div className = 'search'>
+      <form onSubmit={ (e) => { 
+        e.preventDefault()
+        this.props.setLocation(this.state.userInput) 
+        this.setState({
+          userInput: ''
+        })
+        }} className = 'search'>
         <h1 className = 'title'> Weatherly </h1>
           <input type = 'text' 
             placeholder = 'Search for a city' 
             value = { this.state.userInput }
-            onChange={ this.userInput }
+            onChange={ (e) =>
+              this.setState( {userInput: e.target.value} )
+             }
             />
-          <button onClick = { (e) => this.props.cityLocation(this.state.userInput) }>SUBMIT</button>
-      </div>
+          <button>SUBMIT</button>
+      </form>
     )
   }
 }
