@@ -5,7 +5,8 @@ export const currentWeather = data => {
     location: data.current_observation.display_location.full, 
     current: data.current_observation.temp_f + '•F', 
     high: currentDay.high.fahrenheit + '•F', 
-    low: currentDay.low.fahrenheit + '•F', conditions: currentDay.conditions, 
+    low: currentDay.low.fahrenheit + '•F', 
+    conditions: currentDay.conditions, 
     icon: currentDay.icon_url 
   }
   return  currentDayObj;
