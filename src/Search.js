@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       userInput: ''
     }
     // this.getInput = this.getInput.bind(this)
   }
 
+  userInput = (event) => {
+    this.setState( {userInput: event.target.value} )
+    console.log(this.state.userInput)
+  }
 
   render(){
     return (
@@ -17,8 +21,9 @@ class Search extends Component {
           <input type = 'text' 
             placeholder = 'Search for a city' 
             value = { this.state.userInput }
-            onChange={ this.getInput }
-          />
+            onChange={ this.userInput }
+            />
+          <button onClick = { (e) => this.props.cityLocation(this.state.userInput) }>SUBMIT</button>
       </div>
     )
   }

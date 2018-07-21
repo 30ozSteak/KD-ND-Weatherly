@@ -19,11 +19,23 @@ class App extends Component {
     }
   }
 
+  importLocation() {
+    const url= `http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.userLocation}.json`
+    
+    fetch(url).then(response => response.json()).then(data => console.log(data)) 
+    .catch(error => {
+      throw new Error(error)
+    })
+  }
+
   chooseLocation = (location) => {
-    location.preventDefault()
-    this.setState( { userLocation: location } )
+    this.setState( { userLocation: location }, this.importLocation )
+    console.log(this.state.userLocation)
+
   }
   
+
+
   render() {
     return (
       <div className="App">
