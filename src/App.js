@@ -7,7 +7,7 @@ import Card from './Card';
 import Key from './Key';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
-import {currentWeather} from './DataScrape';
+import {currWeatherData} from './DataScrape';
 
 class App extends Component {
   constructor(){
@@ -26,8 +26,9 @@ class App extends Component {
     const url= `http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.userLocation}.json`
     
     fetch(url).then(response => response.json()).then(response => {
+      let newWeather = currWeatherData(response)
       this.setState({
-        CurrentWeather: currentWeather(response),
+        CurrentWeather: newWeather,
 
       })
     }) 
@@ -38,7 +39,7 @@ class App extends Component {
 
   chooseLocation = (location) => {
     this.setState( { userLocation: location }, this.importLocation )
-    console.log(this.state.userLocation)
+    // console.log(this.state.userLocation)
 
   }
   

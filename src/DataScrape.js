@@ -1,4 +1,4 @@
-export const currentWeather = data => {
+export const currWeatherData = data => {
   const currentDay = data.forecast.simpleforecast.forecastday.find(currentDay => currentDay.period === 1)
   const currentDayObj = { 
     time: data.current_observation.observation_time, 
