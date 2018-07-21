@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Welcome from './Welcome';
 import Search from './Search';
-import CurrentWeather from './CurrentWeather';
+import CurrentWeather  from './CurrentWeather';
 import Card from './Card';
 import Key from './Key';
 import SevenHourForecast from './SevenHourForecast';
@@ -42,7 +42,6 @@ class App extends Component {
 
   }
   
-
 
   render() {
     return (
