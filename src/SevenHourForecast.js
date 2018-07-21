@@ -1,3 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default SevenHourForecast
+class SevenHourForecast  extends Component {
+  super(){
+    this.state = {
+
+    }
+  }
+
+  render(){
+    return (
+      <div>
+        <h1>Seven Hour</h1>
+      </div>
+    )
+  }
+}
+
+export default SevenHourForecast;

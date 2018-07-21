@@ -5,6 +5,8 @@ import Search from './Search';
 import CurrentWeather from './CurrentWeather';
 import Card from './Card';
 import Key from './Key'
+import SevenHourForecast from './SevenHourForecast';
+import TenDayForecast from './TenDayForecast'
 
 class App extends Component {
   constructor(){
@@ -41,6 +43,9 @@ class App extends Component {
       <div className="App">
         <Welcome />
         <Search cityLocation={this.chooseLocation} />
+        <SevenHourForecast />
+        <TenDayForecast />
+        <Card />
       </div>
     );
   }
