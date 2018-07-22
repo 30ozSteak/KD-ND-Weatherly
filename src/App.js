@@ -3,7 +3,7 @@ import './App.css';
 import Welcome from './Welcome';
 import Search from './Search';
 import CurrentWeather  from './CurrentWeather';
-import Card from './Card';
+import TenDayCard from './TenDayCard';
 import Key from './Key';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
