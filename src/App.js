@@ -14,7 +14,6 @@ class App extends Component {
     super();
     this.state = {
       userLocation: '',
-      state: 'co',
       time: '',
       date: '',
       CurrentWeather: {},
@@ -23,7 +22,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.importLocation('Denver, co');
   }
 
@@ -34,13 +33,15 @@ class App extends Component {
     fetch(url).then(response => response.json())
     .then(res => {
       const newWeather = currWeatherData(res)
+      console.log(res)
       this.setState({
         userLocation: newWeather.location,
         CurrentWeather: newWeather,
+        TenDayForecast: res.forecast.simpleforecast.forecastday
       })
     })
     .catch(error => {
-      throw new Error(error)
+      alert('Please enter a valid location')
     })
   }
   
@@ -51,8 +52,7 @@ class App extends Component {
         <Welcome />
         <Search setLocation={(location) => this.importLocation(location)} />
         <SevenHourForecast />
-        <TenDayForecast />
-        <Card />
+        <TenDayForecast weather={this.state.TenDayForecast}/>
         <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
     );

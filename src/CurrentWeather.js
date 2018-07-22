@@ -7,8 +7,9 @@ const CurrentWeather = (props) => {
       <p>{ props.weather.time }</p>
       <p>{ props.weather.location }</p>
       <p>{ props.weather.current }</p>
-      <p>{ props.weather.high }</p>
-      <p>{ props.weather.low }</p>
+      {/* <p>{ props.weather.high }</p>
+      <p>{ props.weather.low }</p> */}
+      <img src={ props.weather.icon }/>
     </div>
     )
   }
