@@ -13,7 +13,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      userLocation: 'Denver',
+      userLocation: '',
       state: 'co',
       time: '',
       date: '',
@@ -24,33 +24,24 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.importLocation();
+    this.importLocation('Denver, co');
   }
 
-  importLocation() {
-    let zip = this.state.userLocation;
-    let state = this.state.state;
-    const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${state}/${zip}.json`
+  importLocation(location) {
+    const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
 
-    fetch(url).then(response => response.json()).then(response => {
-      console.log(response)
-      let newWeather = currWeatherData(response)
+    console.log(url)
+    fetch(url).then(response => response.json())
+    .then(res => {
+      const newWeather = currWeatherData(res)
       this.setState({
+        userLocation: newWeather.location,
         CurrentWeather: newWeather,
       })
-    }) 
+    })
     .catch(error => {
       throw new Error(error)
     })
-  }
-
-  setLocation = (location) => {
-    let newLocation = location
-
-    this.setState( { 
-      userLocation: newLocation 
-    }, this.importLocation())
-
   }
   
 
@@ -58,11 +49,11 @@ class App extends Component {
     return (
       <div className="App">
         <Welcome />
-        <Search setLocation={this.setLocation} />
+        <Search setLocation={(location) => this.importLocation(location)} />
         <SevenHourForecast />
         <TenDayForecast />
         <Card />
-        <CurrentWeather />
+        <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
     );
   }
