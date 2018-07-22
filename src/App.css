@@ -11,6 +11,10 @@ body{
   height: 80px;
 }
 
+.tenDayWeather {
+  display: flex;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
