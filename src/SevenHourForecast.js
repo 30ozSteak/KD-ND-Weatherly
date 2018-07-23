@@ -3,12 +3,12 @@ import SevenHourCard from './SevenHourCard';
 
 const SevenHourForecast = (props) => {
   return (
-    <div className = 'sevenDayWeather'>
-      {props.weather.map((hour, i) => {
+    <div className = 'seven-hour-weather'>
+      {props.weather.slice(0, 7).map((hour, i) => {
         return (
-          <SevenHourCard hour={`hour${i}`}
-                         time={hour.time}
-                         temp={ `{hour.temp}º` }
+          <SevenHourCard key={`hour${i}`}
+                         time={hour.FCCTIME}
+                         temp={ hour.temp.english }
                          condition={hour.condition}
                          icon={hour.icon}
                          />

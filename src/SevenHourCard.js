@@ -6,8 +6,7 @@ const SevenHourCard = (props) => {
     <div>
       <h1>{props.day}</h1>
       <h1>{props.date}</h1>
-      <h1>{props.high}ºF</h1>
-      <h1>{props.low}ºF</h1>
+      <h1>{props.temp}ºF</h1>
     </div>
   )
 }

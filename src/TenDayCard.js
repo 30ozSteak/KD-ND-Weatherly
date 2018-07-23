@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const TenDayCard = (props) => {
-    console.log(props.day)
+    // console.log(props.day)
     return (
     <div className="ten-day-card">
       <h1 className='ten-day-day'>{props.day}</h1>

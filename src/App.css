@@ -3,7 +3,8 @@
 }
 
 body{
-  background:url(img/sky.jpeg)
+  background:url(https://source.unsplash.com/collection/289662/1600x900);
+  /* background-size: cover; */
 }
 
 .title {
@@ -75,6 +76,12 @@ body{
 
 .ten-day-high {
   margin-bottom: 0;
+}
+
+.seven-hour-weather {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .App-header {

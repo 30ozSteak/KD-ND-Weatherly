@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Welcome from './Welcome';
 import Search from './Search';
-import CurrentWeather  from './CurrentWeather';
-import TenDayCard from './TenDayCard';
-import SevenHourCard from './SevenHourCard';
+// import TenDayCard from './TenDayCard';
+// import SevenHourCard from './SevenHourCard';
 import Key from './Key';
+import CurrentWeather  from './CurrentWeather';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
 import {currWeatherData} from './DataScrape';
@@ -39,7 +39,8 @@ class App extends Component {
       this.setState({
         userLocation: newWeather.location,
         CurrentWeather: newWeather,
-        TenDayForecast: res.forecast.simpleforecast.forecastday
+        TenDayForecast: res.forecast.simpleforecast.forecastday,
+        SevenHourForecast: res.hourly_forecast
       })
     })
     .catch(error => {
@@ -64,8 +65,8 @@ class App extends Component {
         <Search setLocation={(location) => this.importLocation(location)} />
         <Welcome />
         <h1>Seven Hour Forecast</h1>
-        <SevenHourForecast weather={this.state.SevenHourForecast}/>
-        <TenDayForecast weather={this.state.TenDayForecast}/>
+        {/* <SevenHourForecast weather={this.state.SevenHourForecast}/> */}
+        {/* <TenDayForecast weather={this.state.TenDayForecast}/> */}
         <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
     );
