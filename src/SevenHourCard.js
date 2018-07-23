@@ -4,9 +4,9 @@ const SevenHourCard = (props) => {
   console.log(props.day)
   return (
     <div>
-      <h1>{props.day}</h1>
-      <h1>{props.date}</h1>
+      <h1>{props.time}</h1>
       <h1>{props.temp}ºF</h1>
+      <img src={props.icon}/>
     </div>
   )
 }

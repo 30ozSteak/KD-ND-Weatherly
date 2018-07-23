@@ -65,8 +65,8 @@ class App extends Component {
         <Search setLocation={(location) => this.importLocation(location)} />
         <Welcome />
         <h1>Seven Hour Forecast</h1>
-        {/* <SevenHourForecast weather={this.state.SevenHourForecast}/> */}
-        {/* <TenDayForecast weather={this.state.TenDayForecast}/> */}
+        <SevenHourForecast weather={this.state.SevenHourForecast}/>
+        <TenDayForecast weather={this.state.TenDayForecast}/>
         <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
     );
