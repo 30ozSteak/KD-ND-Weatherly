@@ -13,9 +13,10 @@ const TenDayForecast = (props) => {
               low={day.low.fahrenheit}
               icon={day.icon_url}
               />
-    })}
+      )}
+  )}
+)
   </div>
-  )
-}
+  )}
   
 export default TenDayForecast;
