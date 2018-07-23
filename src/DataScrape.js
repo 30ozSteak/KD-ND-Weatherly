@@ -4,8 +4,8 @@ export const currWeatherData = data => {
     time: data.current_observation.observation_time, 
     location: data.current_observation.display_location.full, 
     current: data.current_observation.temp_f + 'ºF', 
-    // high: currentDay.high.fahrenheit + 'ºF', 
-    // low: currentDay.low.fahrenheit + 'ºF', 
+    high: currentDay.high.fahrenheit + 'ºF', 
+    low: currentDay.low.fahrenheit + 'ºF', 
     conditions: currentDay.conditions, 
     icon: currentDay.icon_url 
   }

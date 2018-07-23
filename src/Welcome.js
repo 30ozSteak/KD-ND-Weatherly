@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Welcome = (props) => {
@@ -6,6 +7,7 @@ const Welcome = (props) => {
       <h1 className = "welcomeText">Weatherly Baybeeee</h1>
     </div>  
   )
+
 }
 
 export default Welcome;

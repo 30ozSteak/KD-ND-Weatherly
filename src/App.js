@@ -20,6 +20,7 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
+      // typeOfWeather: ''
     }
   }
 
@@ -45,13 +46,23 @@ class App extends Component {
       alert('Please enter a valid location')
     })
   }
+
+  //function to evaluate weather
+  //if statement 'current'
+  //  else if 'tenday'
+  //  else if 'sevenHour'
+  //  else renders welcome
   
+  //function changeWeather (*arguement*)
+  //  this.setstate ({typeOfWeather: *arguement*})
+
+
 
   render() {
     return (
-      <div className="App">
-        <Welcome />
+      <div className="app">
         <Search setLocation={(location) => this.importLocation(location)} />
+        <Welcome />
         <h1>Seven Hour Forecast</h1>
         <SevenHourForecast weather={this.state.SevenHourForecast}/>
         <TenDayForecast weather={this.state.TenDayForecast}/>
