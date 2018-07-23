@@ -17,6 +17,6 @@ const TenDayForecast = (props) => {
   )}
 )
   </div>
-  )}
+)}
   
 export default TenDayForecast;

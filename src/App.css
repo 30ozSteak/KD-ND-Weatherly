@@ -1,25 +1,29 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-shadow: 5px 2px 5px black;
+}
+
 .app {
+  margin-top: 20rem;
   text-align: center;
 }
 
+.app input{
+  width: 20rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.322);
+  border: none;
+}
+
+.app input::placeholder{
+  color: white;
+  font-size: 1rem;
+}
+
 body{
-  background:url(https://source.unsplash.com/collection/289662/1600x900);
-  /* background-size: cover; */
-}
-
-.title {
-  font-size: 5rem;
-  color: #f4f4f4;
-}
-
-.welcome-header {
-  font-size: 5rem;
-  color: #f4f4f4;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  background:url(https://source.unsplash.com/collection/1457745/1600x900);
+  background-size:cover;
 }
 
 .current-weather {
@@ -82,24 +86,4 @@ body{
   display: flex;
   width: 100%;
   justify-content: space-around;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

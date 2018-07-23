@@ -62,11 +62,11 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Search setLocation={(location) => this.importLocation(location)} />
         <Welcome />
         <h1>Seven Hour Forecast</h1>
-        {/* <SevenHourForecast weather={this.state.SevenHourForecast}/> */}
-        {/* <TenDayForecast weather={this.state.TenDayForecast}/> */}
+        <Search setLocation={(location) => this.importLocation(location)} />
+        {/* <SevenHourForecast weather={this.state.SevenHourForecast}/>
+        <TenDayForecast weather={this.state.TenDayForecast}/> */}
         <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
     );
