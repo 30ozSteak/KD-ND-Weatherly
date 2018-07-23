@@ -11,7 +11,6 @@ class Search extends Component {
   render(){
     return (
       <form >
-        <h1 className = 'title'> Weatherly </h1>
           <input type = 'text' 
             placeholder = 'Search for a city' 
             value = { this.state.userInput }

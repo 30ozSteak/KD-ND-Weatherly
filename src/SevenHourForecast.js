@@ -1,19 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import SevenHourCard from './SevenHourCard';
 
-class SevenHourForecast  extends Component {
-  super(){
-    this.state = {
-
-    }
-  }
-
-  render(){
-    return (
-      <div>
-        <h1>Seven Hour</h1>
-      </div>
-    )
-  }
+const SevenHourForecast = (props) => {
+  return (
+    <div className = 'sevenDayWeather'>
+      {props.weather.map((hour, i) => {
+        return (
+          <SevenHourCard hour={`hour${i}`}
+                         time={hour.time}
+                         temp={ `{hour.temp}º` }
+                         condition={hour.condition}
+                         icon={hour.icon}
+                         />
+                )
+              }
+            )
+          }
+    </div>
+  )
 }
 
 export default SevenHourForecast;

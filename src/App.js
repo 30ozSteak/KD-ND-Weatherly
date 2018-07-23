@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import Search from './Search';
 import CurrentWeather  from './CurrentWeather';
 import TenDayCard from './TenDayCard';
+import SevenHourCard from './SevenHourCard';
 import Key from './Key';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
@@ -51,7 +52,8 @@ class App extends Component {
       <div className="App">
         <Welcome />
         <Search setLocation={(location) => this.importLocation(location)} />
-        <SevenHourForecast />
+        <h1>Seven Hour Forecast</h1>
+        <SevenHourForecast weather={this.state.SevenHourForecast}/>
         <TenDayForecast weather={this.state.TenDayForecast}/>
         <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
