@@ -1,19 +1,13 @@
-import React, { Component } from 'react';
 
-class Welcome extends Component {
-  super(){
-    this.state = {
+import React from 'react';
 
-    }
-  }
+const Welcome = (props) => {
+  return (
+    <div className = "welcomeToWeatherly">
+      <h1 className = "welcomeText">Weatherly Baybeeee</h1>
+    </div>  
+  )
 
-  render(props){
-    return (
-      <div>
-        <h1 className='welcome-header'>Welcome</h1>
-      </div>
-    )
-  }
 }
 
 export default Welcome;

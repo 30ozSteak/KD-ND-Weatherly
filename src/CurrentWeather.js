@@ -12,7 +12,6 @@ const CurrentWeather = (props) => {
         <img src={ props.weather.icon }/>
         <p>Low: { props.weather.low }</p>
       </div>
-    </div>
     )
   }
 
