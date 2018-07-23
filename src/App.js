@@ -63,10 +63,10 @@ class App extends Component {
     return (
       <div className="app">
         <Welcome />
-        <h1>Seven Hour Forecast</h1>
         <Search setLocation={(location) => this.importLocation(location)} />
-        {/* <SevenHourForecast weather={this.state.SevenHourForecast}/>
-        <TenDayForecast weather={this.state.TenDayForecast}/> */}
+        <h1>Seven Hour Forecast</h1>
+        <SevenHourForecast weather={this.state.SevenHourForecast}/>
+        <TenDayForecast weather={this.state.TenDayForecast}/>
         <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
     );
