@@ -7,10 +7,10 @@ class Welcome extends Component {
     }
   }
 
-  render(){
+  render(props){
     return (
       <div>
-        <h1>Hello there</h1>
+        <h1 className='welcome-header'>Welcome</h1>
       </div>
     )
   }

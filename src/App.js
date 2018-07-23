@@ -3,7 +3,6 @@ import './App.css';
 import Welcome from './Welcome';
 import Search from './Search';
 import CurrentWeather  from './CurrentWeather';
-import TenDayCard from './TenDayCard';
 import Key from './Key';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
@@ -19,6 +18,7 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
+      // typeOfWeather: ''
     }
   }
 
@@ -44,13 +44,23 @@ class App extends Component {
       alert('Please enter a valid location')
     })
   }
+
+  //function to evaluate weather
+  //if statement 'current'
+  //  else if 'tenday'
+  //  else if 'sevenHour'
+  //  else renders welcome
   
+  //function changeWeather (*arguement*)
+  //  this.setstate ({typeOfWeather: *arguement*})
+
+
 
   render() {
     return (
-      <div className="App">
-        <Welcome />
+      <div className="app">
         <Search setLocation={(location) => this.importLocation(location)} />
+        <Welcome />
         <SevenHourForecast />
         <TenDayForecast weather={this.state.TenDayForecast}/>
         <CurrentWeather weather={this.state.CurrentWeather}/>
