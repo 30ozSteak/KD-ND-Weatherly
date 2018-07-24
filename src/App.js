@@ -20,6 +20,7 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
+      display: true
     }
   }
 
@@ -30,11 +31,9 @@ class App extends Component {
   importLocation(location) {
     const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
 
-    console.log(url)
     fetch(url).then(response => response.json())
     .then(res => {
       const newWeather = currWeatherData(res)
-      console.log(res)
       this.setState({
         userLocation: newWeather.location,
         CurrentWeather: newWeather,
@@ -56,6 +55,12 @@ class App extends Component {
   //function changeWeather (*arguement*)
   //  this.setstate ({typeOfWeather: *arguement*})
 
+
+  hideElement = () => {
+    this.setState({
+
+    })
+  }
 
 
   render() {

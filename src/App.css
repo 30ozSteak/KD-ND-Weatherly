@@ -8,6 +8,10 @@
   /* background-color: rgba(231, 231, 231, 0.068); */
 }
 
+.hideElement{
+  display: none;
+}
+
 
 /* ----------------------------Welcome */
 
