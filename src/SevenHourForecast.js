@@ -10,7 +10,7 @@ const SevenHourForecast = (props) => {
             key={`hour${i}`}
             time={ hour.FCTTIME.civil}
             temp={ hour.temp.english }
-            icon={hour.icon_url}
+            icon={ hour.icon_url }
             />
           )}
         )}
