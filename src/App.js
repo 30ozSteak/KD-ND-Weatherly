@@ -29,9 +29,13 @@ class App extends Component {
     localStorage.setItem('location', JSON.stringify(location));
   };
 
-  componentDidMount() {
+  findHome = () => {
     let location = JSON.parse(localStorage.getItem('location')) || null;
     if (location) {this.importLocation(location)};
+  }
+
+  componentDidMount() {
+    this.importLocation('');
     showWelcomeMessage: false;
   }
 
@@ -75,20 +79,22 @@ class App extends Component {
       return (
         <div className="app">
           {this.state.showWelcomeMessage = false}
-          <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
           <CurrentWeather weather={this.state.CurrentWeather}/>
           <Search setLocation={(location) => this.importLocation(location)} 
+          findHome={() =>this.findHome()}
           setSevenHour={this.setSevenHour} 
           setTenDay={this.setTenDay}/>
           {this.state.showSevenHour && <SevenHourForecast weather={this.state.SevenHourForecast}/>}
           {this.state.showTenDay && <TenDayForecast weather={this.state.TenDayForecast}/>}
+          <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
         </div>
       );
     }
     return (
       <div className = "app">
         {this.state.showWelcomeMessage && <Welcome />}
-        <Search setLocation={(location) => this.importLocation(location)} />
+        <Search setLocation={(location) => this.importLocation(location)} 
+                findHome={() =>this.findHome()}/>
       </div>
     )
   }
