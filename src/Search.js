@@ -14,7 +14,7 @@ class Search extends Component {
           <input 
             className = 'search-bar'
             type = 'text' 
-            placeholder = 'Search by City/State/Zip' 
+            placeholder = 'Search by City/State, Zip' 
             value = { this.state.userInput }
             onChange={ (e) =>
               this.setState( {userInput: e.target.value})
@@ -28,9 +28,10 @@ class Search extends Component {
             this.setState({
               userInput: ''
             })
-            
+
           }}
           ></button>
+          <i class="fab fa-github"></i>
       </form>
     )
   }

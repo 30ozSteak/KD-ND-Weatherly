@@ -6,18 +6,16 @@ const SevenHourForecast = (props) => {
     <div className = 'seven-hour-weather'>
       {props.weather.slice(0, 7).map((hour, i) => {
         return (
-          <SevenHourCard key={`hour${i}`}
-                         time={ hour.FCTTIME.civil}
-                         temp={ hour.temp.english }
-                        //  condition={hour.condition}
-                         icon={hour.icon_url}
-                         />
-                )
-              }
-            )
-          }
-    </div>
-  )
-}
+          <SevenHourCard 
+            key={`hour${i}`}
+            time={ hour.FCTTIME.civil}
+            temp={ hour.temp.english }
+            icon={hour.icon_url}
+            />
+          )}
+        )}
+      </div>
+    )
+  }
 
 export default SevenHourForecast;

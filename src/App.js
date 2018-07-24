@@ -20,7 +20,7 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
-      display: true
+      specialDisplay: true
     }
   }
 
@@ -41,6 +41,7 @@ class App extends Component {
         SevenHourForecast: res.hourly_forecast
       })
     })
+    // this needs to be updated and an issue created
     // .catch(error => {
     //   alert('Please enter a valid location')
     // })
@@ -56,11 +57,12 @@ class App extends Component {
   //  this.setstate ({typeOfWeather: *arguement*})
 
 
-  hideElement = () => {
-    this.setState({
-
-    })
-  }
+  // hideElement = () => {
+  //   this.setState({
+  //     specialDisplay: false
+  //   })
+  // }
+  // Not working yet
 
 
   render() {
@@ -69,9 +71,16 @@ class App extends Component {
         <div className="app">
           <Welcome />
           <CurrentWeather weather={this.state.CurrentWeather}/>
+          {/* <div onClick={this.hideElement}></div> this function doesn't work, but it's close....*/}
           <Search setLocation={(location) => this.importLocation(location)} />
           <SevenHourForecast weather={this.state.SevenHourForecast}/>
           <TenDayForecast weather={this.state.TenDayForecast}/>
+          {/* <div className = "toggle-display">
+          <p onClick = {this.hideElement}>7Hour</p>
+          <p>|</p>
+          <p onClick = {this.hideElement}>10-day</p>
+        </div> */}
+        {/* not working yet either */}
         </div>
       );
     }
