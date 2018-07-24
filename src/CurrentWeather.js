@@ -8,7 +8,7 @@ const CurrentWeather = (props) => {
       <div className="current-bottom-row">
         <p>High: { props.weather.high }</p>
         
-        <img src={require(`./img/${props.weather.icon}.png`)}/>
+        <img className = 'weather-icon' src={require(`./img/${props.weather.icon}.png`)}/>
         <p>Low: { props.weather.low }</p>
       </div>
       </div>

@@ -1,6 +1,8 @@
 *{
   font-family: 'Gudea', sans-serif;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .app {
@@ -24,28 +26,6 @@
 .welcomeTextTwo{
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.835);
   font-size: 3rem;
-}
-
-.fa-github{
-  font-size: 3rem;
-}
-
-.fa-github:hover{
-  animation: morphingLogo 3s linear infinite;
-  color: rgb(239, 120, 255);
-  cursor: pointer;
-}
-
-@keyframes morphingLogo {
-  0% {
-    filter: hue-rotate(-90deg);
-  }
-  50% {
-    filter: hue-rotate(90deg);
-  }
-  100% {
-    filter: hue-rotate(-90deg);
-  }
 }
 
 /* ----------------------------search */
@@ -79,8 +59,15 @@ button{
 
 /* ---------------------current weather */
 
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9rem;
+}
+
 .current-temp{
-  font-size: 12rem;
+  font-size: 10rem;
   margin: 0;
   padding: 0;
   text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.493);
@@ -93,22 +80,28 @@ body{
 
 .currently-in-text{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
-
-}
-
-.current-weather {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .current-bottom-row {
-  width: 40%;
   display: flex;
   justify-content: space-around;
 }
 
 /* ---------------------ten day weather */
+
+.seven-hour-button,
+.ten-day-button {
+  display: inline;
+  padding: 3rem;
+  cursor: pointer;
+  text-shadow: 2px 2px 5px black;
+}
+
+.seven-hour-button:hover,
+.ten-day-button:hover {
+  color: rgb(206, 206, 206);
+  
+}
 
 .ten-day-weather {
   display: flex;
@@ -127,11 +120,8 @@ body{
 }
 
 .ten-day-weather{
+  padding: 1rem 0;
   background-color: rgba(2, 2, 8, 0.849);
-}
-
-.ten-day-day {
-  margin-bottom: 0;
 }
 
 .ten-day-date {
@@ -146,8 +136,30 @@ body{
 
 .seven-hour-weather {
   display: flex;
-  width: 100%;
   justify-content: space-around;
   background-color: rgba(2, 2, 8, 0.849);
-  padding-bottom: 2rem;
+}
+
+/* ----------------------------Nicks Special Logo */
+
+.fa-github{
+  font-size: 3rem;
+}
+
+.fa-github:hover{
+  animation: morphingLogo 3s linear infinite;
+  color: rgb(239, 120, 255);
+  cursor: pointer;
+}
+
+@keyframes morphingLogo {
+  0% {
+    filter: hue-rotate(-90deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    filter: hue-rotate(-90deg);
+  }
 }
