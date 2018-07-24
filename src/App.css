@@ -1,21 +1,23 @@
 *{
   font-family: 'Barlow Semi Condensed', sans-serif;
   color: white;
+  text-shadow: 3px 3px black;
 }
 
 .app {
   text-align: center;
+
 }
 
 /* ----------------------------search */
 .search-bar{
-  margin-top: 20rem;
   width: 30rem;
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.486);
   border: none;
   box-shadow: 3px 3px black;
   font-size: 1rem;
+  transition: .5s;
 }
 
 .app input::placeholder{
@@ -26,17 +28,27 @@ button{
   border-radius: 50px;
   width: 3rem;
   height: 3rem;
-  color: black;
+  color: rgb(255, 255, 255);
+  border: none;
+  background: none;
+  font-size: 2rem;
 }
 
 /* ---------------------current weather */
 
 .current-temp{
   font-size: 12rem;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-  background: url(https://source.unsplash.com/collection/477172/1600x900);
+  background: 
+  linear-gradient(
+    rgba(0, 6, 17, 0.815),
+    rgba(0,9,26, 0.815)),
+url(https://source.unsplash.com/collection/477172/1600x900);
+
   /* background-size:cover; */
 }
 
