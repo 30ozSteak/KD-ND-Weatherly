@@ -21,14 +21,16 @@ class Search extends Component {
              }
             />
           <button 
+            className = 'magic-button'
             onClick={(e) => { 
             e.preventDefault()
             this.props.setLocation(this.state.userInput)
             this.setState({
               userInput: ''
             })
+            
           }}
-          >SUBMIT</button>
+          ></button>
       </form>
     )
   }
