@@ -7,6 +7,7 @@ import CurrentWeather  from './CurrentWeather';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
 import {currWeatherData} from './DataScrape';
+import HomeButton from './HomeButton';
 
 class App extends Component {
   constructor(){
@@ -47,7 +48,7 @@ class App extends Component {
         TenDayForecast: res.forecast.simpleforecast.forecastday,
         SevenHourForecast: res.hourly_forecast,
       })
-      this.setLocalStorage(location);
+      // this.setLocalStorage(location);
     })
     // this needs to be updated and an issue created
     // .catch(error => {
@@ -74,6 +75,7 @@ class App extends Component {
       return (
         <div className="app">
           {this.state.showWelcomeMessage = false}
+          <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
           <CurrentWeather weather={this.state.CurrentWeather}/>
           <Search setLocation={(location) => this.importLocation(location)} 
           setSevenHour={this.setSevenHour} 
