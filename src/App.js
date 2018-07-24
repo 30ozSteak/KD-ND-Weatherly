@@ -20,20 +20,24 @@ class App extends Component {
       TenDayForecast: [],
       showSevenHour: false,
       showTenDay: false,
+      showWelcomeMessage: true,
     }
   }
 
+  setLocalStorage = (location) => {
+    localStorage.setItem('location', JSON.stringify(location));
+  };
+
   componentDidMount() {
-    this.importLocation('');
+    let location = JSON.parse(localStorage.getItem('location')) || null;
+    if (location) {this.importLocation(location)};
+    showWelcomeMessage: false;
   }
 
   importLocation(location) {
     const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
 
-<<<<<<< HEAD
     console.log(url)
-=======
->>>>>>> 9a5e800588d50462a00e7b2407e4f9a8a494ef37
     fetch(url).then(response => response.json())
     .then(res => {
       const newWeather = currWeatherData(res)
@@ -41,8 +45,9 @@ class App extends Component {
         userLocation: newWeather.location,
         CurrentWeather: newWeather,
         TenDayForecast: res.forecast.simpleforecast.forecastday,
-        SevenHourForecast: res.hourly_forecast
+        SevenHourForecast: res.hourly_forecast,
       })
+      this.setLocalStorage(location);
     })
     // this needs to be updated and an issue created
     // .catch(error => {
@@ -50,48 +55,30 @@ class App extends Component {
     // })
   }
 
-  //function to evaluate weather
-  //if statement 'current'
-  //  else if 'tenday'
-  //  else if 'sevenHour'
-  //  else renders welcome
-  
-  //function changeWeather (*arguement*)
-  //  this.setstate ({typeOfWeather: *arguement*})
-
-
-  // hideElement = () => {
-  //   this.setState({
-  //     specialDisplay: false
-  //   })
-  // }
-  // Not working yet
-
+  setSevenHour = () => {
+  this.setState({
+    showSevenHour: true,
+    showTenDay: false,
+    showWelcomeMessage: true
+  })
+}
 
   render() {
     if(this.state.userLocation){
       return (
         <div className="app">
-          <Welcome />
+          {this.state.showWelcomeMessage = false}
+          {/* {this.state.showWelcomeMessage && <Welcome />} */}
           <CurrentWeather weather={this.state.CurrentWeather}/>
-          {/* <div onClick={this.hideElement}></div> this function doesn't work, but it's close....*/}
           <Search setLocation={(location) => this.importLocation(location)} />
-          <SevenHourForecast weather={this.state.SevenHourForecast}/>
-          {/* {this.state.setSevenHour && <SevenHourForecast weather={this.state.SevenHourForecast}/>} */}
-
-          <TenDayForecast weather={this.state.TenDayForecast}/>
-          {/* <div className = "toggle-display">
-          <p onClick = {this.hideElement}>7Hour</p>
-          <p>|</p>
-          <p onClick = {this.hideElement}>10-day</p>
-        </div> */}
-        {/* not working yet either */}
+          {this.state.showSevenHour && <SevenHourForecast weather={this.state.SevenHourForecast}/>}
+          {this.state.showTenDay && <TenDayForecast weather={this.state.TenDayForecast}/>}
         </div>
       );
     }
     return (
       <div className = "app">
-        <Welcome />
+        {this.state.showWelcomeMessage && <Welcome />}
         <Search setLocation={(location) => this.importLocation(location)} />
       </div>
     )
