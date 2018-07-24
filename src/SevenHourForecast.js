@@ -20,13 +20,3 @@ const SevenHourForecast = (props) => {
   }
 
 export default SevenHourForecast;
-
-// <a onClick = {this.props.setSevenHour|}
-
-// setSevenHour = () => {
-//   this.setState({
-//     welcome: false,
-//     showCurrentWeather: true,
-//     showSevenHour: true;
-//   })
-// }

@@ -60,7 +60,13 @@ class App extends Component {
   this.setState({
     showSevenHour: true,
     showTenDay: false,
-    showWelcomeMessage: true
+  })
+}
+
+  setTenDay = () =>{
+  this.setState({
+    showSevenHour:false,
+    showTenDay: true,
   })
 }
 
@@ -69,10 +75,11 @@ class App extends Component {
       return (
         <div className="app">
           {this.state.showWelcomeMessage = false}
-          {/* {this.state.showWelcomeMessage && <Welcome />} */}
           <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
           <CurrentWeather weather={this.state.CurrentWeather}/>
-          <Search setLocation={(location) => this.importLocation(location)} />
+          <Search setLocation={(location) => this.importLocation(location)} 
+          setSevenHour={this.setSevenHour} 
+          setTenDay={this.setTenDay}/>
           {this.state.showSevenHour && <SevenHourForecast weather={this.state.SevenHourForecast}/>}
           {this.state.showTenDay && <TenDayForecast weather={this.state.TenDayForecast}/>}
         </div>
