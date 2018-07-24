@@ -31,7 +31,7 @@ class App extends Component {
   importLocation(location) {
     const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
 
-    // console.log(url)
+    console.log(url)
     fetch(url).then(response => response.json())
     .then(res => {
       const newWeather = currWeatherData(res)
