@@ -32,7 +32,16 @@ class Search extends Component {
           }}
           ></button>
 
+
           <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>7Hour</h1> 
+          <i className="fas fa-home"
+            onClick={(e) => {
+            e.preventDefault()
+            this.props.findHome()
+            // this.setState({
+
+            // })
+          }}></i>
           <h1 className="ten-day-button" onClick={this.props.setTenDay}>10Day</h1>
       </form>
     )

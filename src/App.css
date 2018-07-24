@@ -152,6 +152,16 @@ body{
   cursor: pointer;
 }
 
+.fa-home {
+  font-size: 3rem;
+  color: #f4f4f4;
+}
+
+.fa-home:hover {
+  color: rgb(206, 206, 206);
+  cursor: pointer;
+}
+
 @keyframes morphingLogo {
   0% {
     filter: hue-rotate(-90deg);
