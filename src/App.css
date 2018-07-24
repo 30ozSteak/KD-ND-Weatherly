@@ -64,7 +64,6 @@
 
 .app input::placeholder{
   color: white;
-
 }
 
 button{
@@ -92,6 +91,11 @@ body{
   text-align: center;
 }
 
+.currently-in-text{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
+
+}
+
 .current-weather {
   display: flex;
   flex-direction: column;
@@ -117,9 +121,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: #b19597; */
-  font-size: .75rem;
-  /* height: 33vh; */
+  font-size: .55rem;
   width: 9.7%;
   color: #f4f4f4;
 }
@@ -129,14 +131,11 @@ body{
 }
 
 .ten-day-day {
-  /* color: black; */
   margin-bottom: 0;
 }
 
 .ten-day-date {
-  /* margin: 0 auto 8px; */
   font-size: .8rem;
-  /* color: black; */
 }
 
 .ten-day-icon {
