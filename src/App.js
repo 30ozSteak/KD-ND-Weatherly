@@ -20,22 +20,24 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
-      // typeOfWeather: ''
+      specialDisplay: true
     }
   }
 
-  componentWillMount() {
-    this.importLocation('Denver, co');
+  componentDidMount() {
+    this.importLocation('');
   }
 
   importLocation(location) {
     const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
 
+<<<<<<< HEAD
     console.log(url)
+=======
+>>>>>>> 9a5e800588d50462a00e7b2407e4f9a8a494ef37
     fetch(url).then(response => response.json())
     .then(res => {
       const newWeather = currWeatherData(res)
-      console.log(res)
       this.setState({
         userLocation: newWeather.location,
         CurrentWeather: newWeather,
@@ -43,9 +45,10 @@ class App extends Component {
         SevenHourForecast: res.hourly_forecast
       })
     })
-    .catch(error => {
-      alert('Please enter a valid location')
-    })
+    // this needs to be updated and an issue created
+    // .catch(error => {
+    //   alert('Please enter a valid location')
+    // })
   }
 
   //function to evaluate weather
@@ -58,18 +61,39 @@ class App extends Component {
   //  this.setstate ({typeOfWeather: *arguement*})
 
 
+  // hideElement = () => {
+  //   this.setState({
+  //     specialDisplay: false
+  //   })
+  // }
+  // Not working yet
+
 
   render() {
+    if(this.state.userLocation){
+      return (
+        <div className="app">
+          <Welcome />
+          <CurrentWeather weather={this.state.CurrentWeather}/>
+          {/* <div onClick={this.hideElement}></div> this function doesn't work, but it's close....*/}
+          <Search setLocation={(location) => this.importLocation(location)} />
+          <SevenHourForecast weather={this.state.SevenHourForecast}/>
+          <TenDayForecast weather={this.state.TenDayForecast}/>
+          {/* <div className = "toggle-display">
+          <p onClick = {this.hideElement}>7Hour</p>
+          <p>|</p>
+          <p onClick = {this.hideElement}>10-day</p>
+        </div> */}
+        {/* not working yet either */}
+        </div>
+      );
+    }
     return (
-      <div className="app">
+      <div className = "app">
         <Welcome />
         <Search setLocation={(location) => this.importLocation(location)} />
-        <h1>Seven Hour Forecast</h1>
-        <SevenHourForecast weather={this.state.SevenHourForecast}/>
-        <TenDayForecast weather={this.state.TenDayForecast}/>
-        <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
-    );
+    )
   }
 }
 

@@ -3,11 +3,11 @@ export const currWeatherData = data => {
   const currentDayObj = { 
     time: data.current_observation.observation_time, 
     location: data.current_observation.display_location.full, 
-    current: data.current_observation.temp_f + 'ºF', 
-    high: currentDay.high.fahrenheit + 'ºF', 
-    low: currentDay.low.fahrenheit + 'ºF', 
+    current: Number.parseInt(data.current_observation.temp_f) + '•F', 
+    high: Number.parseInt(currentDay.high.fahrenheit) + '•F', 
+    low: Number.parseInt(currentDay.low.fahrenheit) + '•F', 
     conditions: currentDay.conditions, 
-    icon: currentDay.icon_url 
+    icon: currentDay.icon 
   }
   return  currentDayObj;
 }
