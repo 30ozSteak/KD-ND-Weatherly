@@ -1,29 +1,43 @@
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   color: white;
-  text-shadow: 5px 2px 5px black;
 }
 
 .app {
-  margin-top: 20rem;
   text-align: center;
 }
 
-.app input{
-  width: 20rem;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.322);
+/* ----------------------------search */
+.search-bar{
+  margin-top: 20rem;
+  width: 30rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.486);
   border: none;
+  box-shadow: 3px 3px black;
+  font-size: 1rem;
 }
 
 .app input::placeholder{
   color: white;
-  font-size: 1rem;
+}
+
+button{
+  border-radius: 50px;
+  width: 3rem;
+  height: 3rem;
+  color: black;
+}
+
+/* ---------------------current weather */
+
+.current-temp{
+  font-size: 12rem;
 }
 
 body{
-  background:url(https://source.unsplash.com/collection/1457745/1600x900);
-  background-size:cover;
+  background: url(https://source.unsplash.com/collection/477172/1600x900);
+  /* background-size:cover; */
 }
 
 .current-weather {
@@ -32,15 +46,15 @@ body{
   align-items: center;
 }
 
-.current-temp {
-  font-size: 2rem;
-}
 
 .current-bottom-row {
   width: 40%;
   display: flex;
   justify-content: space-between;
 }
+
+
+/* ---------------------ten day weather */
 
 .ten-day-weather {
   display: flex;
@@ -81,6 +95,8 @@ body{
 .ten-day-high {
   margin-bottom: 0;
 }
+
+/* ---------------------seven hour */
 
 .seven-hour-weather {
   display: flex;

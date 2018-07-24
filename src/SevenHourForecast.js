@@ -7,7 +7,7 @@ const SevenHourForecast = (props) => {
       {props.weather.slice(0, 7).map((hour, i) => {
         return (
           <SevenHourCard key={`hour${i}`}
-                         time={hour.FCTTIME.civil}
+                         time={ hour.FCTTIME.civil}
                          temp={ hour.temp.english }
                         //  condition={hour.condition}
                          icon={hour.icon_url}

@@ -20,12 +20,11 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
-      // typeOfWeather: ''
     }
   }
 
-  componentWillMount() {
-    this.importLocation('Denver, co');
+  componentDidMount() {
+    this.importLocation('');
   }
 
   importLocation(location) {
@@ -43,9 +42,9 @@ class App extends Component {
         SevenHourForecast: res.hourly_forecast
       })
     })
-    .catch(error => {
-      alert('Please enter a valid location')
-    })
+    // .catch(error => {
+    //   alert('Please enter a valid location')
+    // })
   }
 
   //function to evaluate weather
@@ -60,16 +59,23 @@ class App extends Component {
 
 
   render() {
+    if(this.state.userLocation){
+      return (
+        <div className="app">
+          <Welcome />
+          <CurrentWeather weather={this.state.CurrentWeather}/>
+          <Search setLocation={(location) => this.importLocation(location)} />
+          <SevenHourForecast weather={this.state.SevenHourForecast}/>
+          <TenDayForecast weather={this.state.TenDayForecast}/>
+        </div>
+      );
+    }
     return (
-      <div className="app">
+      <div className = "app">
         <Welcome />
         <Search setLocation={(location) => this.importLocation(location)} />
-        <h1>Seven Hour Forecast</h1>
-        <SevenHourForecast weather={this.state.SevenHourForecast}/>
-        <TenDayForecast weather={this.state.TenDayForecast}/>
-        <CurrentWeather weather={this.state.CurrentWeather}/>
       </div>
-    );
+    )
   }
 }
 

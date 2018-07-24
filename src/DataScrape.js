@@ -7,7 +7,7 @@ export const currWeatherData = data => {
     high: currentDay.high.fahrenheit + 'ºF', 
     low: currentDay.low.fahrenheit + 'ºF', 
     conditions: currentDay.conditions, 
-    icon: currentDay.icon_url 
+    icon: currentDay.icon 
   }
   return  currentDayObj;
 }
