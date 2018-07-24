@@ -11,22 +11,27 @@ class Search extends Component {
   render(){
     return (
       <form >
-          <input type = 'text' 
-            placeholder = 'Search for a city' 
+          <input 
+            className = 'search-bar'
+            type = 'text' 
+            placeholder = 'Search by City/State, Zip' 
             value = { this.state.userInput }
             onChange={ (e) =>
               this.setState( {userInput: e.target.value})
              }
             />
           <button 
+            className = 'magic-button'
             onClick={(e) => { 
             e.preventDefault()
             this.props.setLocation(this.state.userInput)
             this.setState({
               userInput: ''
             })
+
           }}
-          >SUBMIT</button>
+          ></button>
+          <i class="fab fa-github"></i>
       </form>
     )
   }

@@ -1,29 +1,99 @@
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gudea', sans-serif;
   color: white;
-  text-shadow: 5px 2px 5px black;
 }
 
 .app {
-  margin-top: 20rem;
   text-align: center;
 }
 
-.app input{
+.hideElement{
+  display: none;
+}
+
+
+/* ----------------------------Welcome */
+
+.welcomeText{
+  margin-top: 15rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
+
+}
+
+.welcomeTextTwo{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.835);
+  font-size: 3rem;
+}
+
+.fa-github{
+  font-size: 3rem;
+}
+
+.fa-github:hover{
+  animation: morphingLogo 3s linear infinite;
+  color: rgb(239, 120, 255);
+  cursor: pointer;
+}
+
+@keyframes morphingLogo {
+  0% {
+    filter: hue-rotate(-90deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    filter: hue-rotate(-90deg);
+  }
+}
+
+/* ----------------------------search */
+
+
+.search-bar{
   width: 20rem;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.322);
+  padding: 1rem .5rem;
+  background-color: rgba(0, 0, 0, 0.767);
   border: none;
+  box-shadow: 3px 3px 6px black;
+  font-size: 1.2rem;
+  transition: .5s;
+  text-align: center;
 }
 
 .app input::placeholder{
   color: white;
-  font-size: 1rem;
+}
+
+button{
+  border-radius: 50px;
+  width: 3rem;
+  height: 3rem;
+  color: rgb(255, 255, 255);
+  border: none;
+  background: none;
+  font-size: 2rem;
+  display: block;
+}
+
+/* ---------------------current weather */
+
+.current-temp{
+  font-size: 12rem;
+  margin: 0;
+  padding: 0;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.493);
 }
 
 body{
-  background:url(https://source.unsplash.com/collection/1457745/1600x900);
-  background-size:cover;
+  background: url(https://source.unsplash.com/collection/148982/1600x900);
+  text-align: center;
+}
+
+.currently-in-text{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
+
 }
 
 .current-weather {
@@ -32,21 +102,18 @@ body{
   align-items: center;
 }
 
-.current-temp {
-  font-size: 2rem;
-}
-
 .current-bottom-row {
   width: 40%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
+/* ---------------------ten day weather */
 
 .ten-day-weather {
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  
+  background-color: rgba(2, 2, 8, 0.849);
 }
 
 .ten-day-card {
@@ -54,36 +121,33 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #b19597;
-  font-size: .75rem;
-  height: 33vh;
+  font-size: .55rem;
   width: 9.7%;
-  border-radius: 5%;
   color: #f4f4f4;
-  opacity: .6;
+}
+
+.ten-day-weather{
+  background-color: rgba(2, 2, 8, 0.849);
 }
 
 .ten-day-day {
-  color: black;
   margin-bottom: 0;
 }
 
 .ten-day-date {
-  margin: 0 auto 8px;
   font-size: .8rem;
-  color: black;
 }
 
 .ten-day-icon {
   width: 3rem;
 }
 
-.ten-day-high {
-  margin-bottom: 0;
-}
+/* ---------------------seven hour */
 
 .seven-hour-weather {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  background-color: rgba(2, 2, 8, 0.849);
+  padding-bottom: 2rem;
 }
