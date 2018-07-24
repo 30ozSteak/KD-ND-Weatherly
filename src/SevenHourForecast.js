@@ -5,12 +5,13 @@ const SevenHourForecast = (props) => {
   return (
     <div className = 'seven-hour-weather'>
       {props.weather.slice(0, 7).map((hour, i) => {
+        console.log(props.weather)
         return (
           <SevenHourCard 
             key={`hour${i}`}
             time={ hour.FCTTIME.civil}
             temp={ hour.temp.english }
-            icon={ hour.icon_url }
+            icon={ hour.icon }
             />
           )}
         )}
@@ -19,3 +20,13 @@ const SevenHourForecast = (props) => {
   }
 
 export default SevenHourForecast;
+
+// <a onClick = {this.props.setSevenHour|}
+
+// setSevenHour = () => {
+//   this.setState({
+//     welcome: false,
+//     showCurrentWeather: true,
+//     showSevenHour: true;
+//   })
+// }
