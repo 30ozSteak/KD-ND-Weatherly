@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Welcome from './Welcome';
 import Search from './Search';
-// import TenDayCard from './TenDayCard';
-// import SevenHourCard from './SevenHourCard';
 import Key from './Key';
 import CurrentWeather  from './CurrentWeather';
 import SevenHourForecast from './SevenHourForecast';
@@ -20,7 +18,8 @@ class App extends Component {
       CurrentWeather: {},
       SevenHourForecast: [],
       TenDayForecast: [],
-      specialDisplay: true
+      showSevenHour: false,
+      showTenDay: false,
     }
   }
 
@@ -78,6 +77,8 @@ class App extends Component {
           {/* <div onClick={this.hideElement}></div> this function doesn't work, but it's close....*/}
           <Search setLocation={(location) => this.importLocation(location)} />
           <SevenHourForecast weather={this.state.SevenHourForecast}/>
+          {/* {this.state.setSevenHour && <SevenHourForecast weather={this.state.SevenHourForecast}/>} */}
+
           <TenDayForecast weather={this.state.TenDayForecast}/>
           {/* <div className = "toggle-display">
           <p onClick = {this.hideElement}>7Hour</p>

@@ -12,7 +12,7 @@ const TenDayForecast = (props) => {
             date={`${day.date.month}/${day.date.day}/${day.date.year}`}
             high={day.high.fahrenheit} 
             low={day.low.fahrenheit}
-            icon={day.icon_url}
+            icon={day.icon}
           />
         )}
       )}
