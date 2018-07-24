@@ -7,7 +7,7 @@ class Search extends Component {
       userInput: ''
     }
   }
-  
+
   render(){
     return (
       <form >
@@ -32,7 +32,8 @@ class Search extends Component {
           }}
           ></button>
           <i className="fab fa-github"></i>
-          <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>7H</h1> <h1>10D</h1>
+          <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>7H</h1> 
+          <h1 className="ten-day-button" onClick={this.props.setTenDay}>10D</h1>
       </form>
     )
   }
