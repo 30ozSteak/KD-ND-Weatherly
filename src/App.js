@@ -34,6 +34,8 @@ class App extends Component {
     if (location) {this.importLocation(location)};
   }
 
+  // Why did we do this again? I know you explained it..
+
   componentDidMount() {
     this.importLocation('');
     showWelcomeMessage: false;
@@ -41,8 +43,6 @@ class App extends Component {
 
   importLocation(location) {
     const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
-
-    console.log(url)
     fetch(url).then(response => response.json())
     .then(res => {
       const newWeather = currWeatherData(res)
@@ -52,7 +52,6 @@ class App extends Component {
         TenDayForecast: res.forecast.simpleforecast.forecastday,
         SevenHourForecast: res.hourly_forecast,
       })
-      // this.setLocalStorage(location);
     })
     // this needs to be updated and an issue created
     // .catch(error => {
@@ -84,9 +83,9 @@ class App extends Component {
           findHome={() =>this.findHome()}
           setSevenHour={this.setSevenHour} 
           setTenDay={this.setTenDay}/>
+          <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
           {this.state.showSevenHour && <SevenHourForecast weather={this.state.SevenHourForecast}/>}
           {this.state.showTenDay && <TenDayForecast weather={this.state.TenDayForecast}/>}
-          <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
         </div>
       );
     }

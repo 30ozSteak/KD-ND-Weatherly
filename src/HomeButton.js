@@ -11,16 +11,15 @@ class HomeButton extends Component {
   render(props){
     return (
       <form >
-          <button 
+          <p 
             className = 'home-button'
             onClick={(e) => { 
             e.preventDefault()
             this.props.updateLocalStorage();
-
             this.setState({
             })
           }}
-          >Home</button>
+          >Set Home</p>
       </form>
     )
   }
