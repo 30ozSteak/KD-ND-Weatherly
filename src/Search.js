@@ -16,8 +16,11 @@ class Search extends Component {
             type = 'text' 
             placeholder = 'Search by City/State, Zip - Then Press Enter' 
             value = { this.state.userInput }
-            onChange={ (e) =>
+            onChange={ (e) =>{
+              e.preventDefault()
               this.setState( {userInput: e.target.value})
+            }
+              
              }
             />
           <button 
