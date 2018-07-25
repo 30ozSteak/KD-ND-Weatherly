@@ -54,9 +54,10 @@ class App extends Component {
       })
     })
     // this needs to be updated and an issue created
-    // .catch(error => {
-    //   alert('Please enter a valid location')
-    // })
+    .catch(error => {
+      // console.log(error)
+      // alert('Please enter a valid location')
+    })
   }
 
   setSevenHour = () => {
