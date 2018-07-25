@@ -12,7 +12,7 @@ class HomeButton extends Component {
     return (
       <form >
           <p 
-            className = 'home-button'
+            className = 'set-home-button'
             onClick={(e) => { 
             e.preventDefault()
             this.props.updateLocalStorage();

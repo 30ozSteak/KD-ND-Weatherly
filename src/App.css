@@ -7,23 +7,47 @@
 
 /* ----------------------------Welcome */
 
-.welcome-header {
-  margin-top: 15rem;
+.welcome-message h1 {
   font-size: 5rem;
   font-family: 'Pacifico';
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
+  margin-top: 15rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.932);
 }
 
-.welcome-header:hover{
-    cursor: pointer;
-  }
-  
-.welcome-header-two{
+.welcome-message h5{
   font-size: 3rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.835);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.945);
 }
 
-/* ----------------------------Home / Local Storage */
+/* ---------------------current weather */
+
+.current-weather-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.973);
+
+}
+
+.current-temp {
+  font-size: 10rem;
+  margin: 0;
+  padding: 0;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.938);
+}
+
+body{
+  background: url(https://source.unsplash.com/collection/148982/1600x900);
+  text-align: center;
+}
+
+.current-bottom-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ---------------Home / Local Storage */
 
 .fa-home {
   color: #f4f4f4;
@@ -32,11 +56,12 @@
 }
 
 .fa-home:hover {
-  color: rgb(206, 206, 206);
+  color: rgb(226, 226, 226);
   cursor: pointer;
 }
 
-.home-button{
+
+.set-home-button{
   font-size: 1rem;
 }
 
@@ -44,10 +69,10 @@
 
 
 .search-bar{
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.767);
   border: none;
-  box-shadow: 3px 3px 6px black;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.438);
   margin-top: 6rem;
   padding: 1rem .5rem;
   transition: .5s;
@@ -56,10 +81,10 @@
 }
 
 .app input::placeholder{
-  color: white;
+  color: rgb(179, 179, 179);
 }
 
-button{
+button {
   background: none;
   border: none;
   border-radius: 50px;
@@ -68,36 +93,6 @@ button{
   font-size: 2rem;
   height: 3rem;
   width: 3rem;
-}
-
-/* ---------------------current weather */
-
-.current-weather {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 9rem;
-}
-
-.current-temp{
-  font-size: 10rem;
-  margin: 0;
-  padding: 0;
-  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.493);
-}
-
-body{
-  background: url(https://source.unsplash.com/collection/148982/1600x900);
-  text-align: center;
-}
-
-.currently-in-text{
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
-}
-
-.current-bottom-row {
-  display: flex;
-  justify-content: space-around;
 }
 
 /* ---------------------ten day weather */
