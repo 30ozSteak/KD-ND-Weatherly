@@ -1,24 +1,37 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount, shallow } from 'enzyme';
 import Search from './search.js';
 
-
 describe('Search', () => {
-  let wrapper;
+  let search;
   beforeEach(() => {
-    wrapper = shallow(<Search />);
+    search = shallow(<Search />);
   });
 
   it('should exist', () => {
-    expect(wrapper).toBeDefined();
+    expect(search).toBeDefined();
   });
 
   it('should have userInput default to an empty string', () => {
-    expect(wrapper.state().userInput).toEqual('');
+    expect(search.state().userInput).toEqual('');
+  });
+
+  it('should render a form that houses our input field', () => {
+    expect(search.find('form').length).toEqual(1);
+  });
+
+  it('should render an input field', () => {
+    expect(search.find('input').length).toEqual(1);
   });
 
   it('should change its state once a user inputs a location', () => {
-    
+    let userInput = search.find('input');
+    let event = {
+      target: {
+        value: 'denver'
+      }
+    }
+    userInput.simulate('change', event);
+    expect(search.state().userInput).toEqual('denver');
   })
 });
