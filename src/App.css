@@ -19,7 +19,11 @@ body{
   margin-top: 15rem;
 }
 
-.welcome-message h5{
+.welcome-header:hover{
+  cursor: pointer;
+}
+  
+.welcome-header-two{
   font-size: 3rem;
 }
 

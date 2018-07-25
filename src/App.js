@@ -55,7 +55,8 @@ class App extends Component {
     })
 
     .catch(error => {
-    //   alert('Please enter a valid location')
+      // console.log(error)
+      // alert('Please enter a valid location')
     })
   }
 

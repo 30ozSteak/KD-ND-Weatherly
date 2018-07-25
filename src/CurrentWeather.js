@@ -11,6 +11,7 @@ const CurrentWeather = (props) => {
         <p>Low: { props.weather.low }</p>
       </div>
       <p class="weather-conditions">{props.weather.conditions}</p>
+        <p>{props.weather.conditions}</p>
       </div>
     )
   }
