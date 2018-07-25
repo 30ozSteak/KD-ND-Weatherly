@@ -2,16 +2,21 @@
   color: white;
   font-family: 'Gudea', sans-serif;
   padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.973);
   margin: 0;
+}
+
+body{
+  background: url(https://source.unsplash.com/collection/148982/1600x900);
+  text-align: center;
 }
 
 /* ----------------------------Welcome */
 
-.welcome-header {
-  margin-top: 15rem;
+.welcome-message h1 {
   font-size: 5rem;
   font-family: 'Pacifico';
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
+  margin-top: 15rem;
 }
 
 .welcome-header:hover{
@@ -20,87 +25,84 @@
   
 .welcome-header-two{
   font-size: 3rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.835);
 }
 
-/* ----------------------------Home / Local Storage */
+/* ---------------------Current weather */
+
+.current-weather-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.current-temp {
+  font-size: 10rem;
+}
+
+.current-bottom-row {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+
+.weather-conditions{
+  font-size: 1.5rem;
+}
+
+/* ---------------Home / Local Storage */
 
 .fa-home {
-  color: #f4f4f4;
-  font-size: 3rem;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.733);
+  font-size: 2rem;
 }
 
 .fa-home:hover {
-  color: rgb(206, 206, 206);
+  color: rgb(226, 226, 226);
   cursor: pointer;
 }
 
-.home-button{
+.set-home-button{
   font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.set-home-button:hover{
+  color: rgb(50, 163, 255);
+  text-shadow: 2px 2px 2px black;
 }
 
 /* ----------------------------search */
 
-
 .search-bar{
-  font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.767);
   border: none;
-  box-shadow: 3px 3px 6px black;
-  margin-top: 6rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.438);
+  font-size: 1rem;
+  margin-top: 3.3rem;
   padding: 1rem .5rem;
   transition: .5s;
   text-align: center;
   width: 20rem;
+  position: relative;
 }
 
 .app input::placeholder{
-  color: white;
+  color: rgb(179, 179, 179);
 }
 
-button{
+button {
   background: none;
   border: none;
   border-radius: 50px;
-  color: rgb(255, 255, 255);
   display: block;
   font-size: 2rem;
   height: 3rem;
   width: 3rem;
 }
 
-/* ---------------------current weather */
+/* ---------------------Hourly/ Daily weather */
 
-.current-weather {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 9rem;
-}
-
-.current-temp{
-  font-size: 10rem;
-  margin: 0;
-  padding: 0;
-  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.493);
-}
-
-body{
-  background: url(https://source.unsplash.com/collection/148982/1600x900);
-  text-align: center;
-}
-
-.currently-in-text{
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.835);
-}
-
-.current-bottom-row {
-  display: flex;
-  justify-content: space-around;
-}
-
-/* ---------------------ten day weather */
 
 .seven-hour-button,
 .ten-day-button {
@@ -108,55 +110,59 @@ body{
   display: inline;
   font-size: 1rem;
   padding: 3rem;
-  text-shadow: 2px 2px 5px black;
   text-transform: uppercase;
+}
+
+.seven-hour-weather,
+.ten-day-weather {
+  background-color: rgba(2, 2, 8, 0.849);
+  display: flex;
+  font-size: .5rem;
+  justify-content: space-around;
+  margin-top: 2.3rem;
+  overflow: scroll;
+}
+
+.seven-hour-temp{
+  padding-bottom: 1.5rem;
 }
 
 .seven-hour-button:hover,
 .ten-day-button:hover {
   color: rgb(206, 206, 206);
-
-}
-
-.ten-day-weather {
-  background-color: rgba(2, 2, 8, 0.849);
-  display: flex;
-  justify-content: space-around;
 }
 
 .ten-day-card {
   align-items: center;
-  color: #f4f4f4;
-  display: flex;
   font-size: .55rem;
-  flex-direction: column;
-  justify-content: center;
-  width: 9.7%;
+  padding: 0 2rem;
 }
 
 .ten-day-weather{
-  background-color: rgba(2, 2, 8, 0.849);
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
-.ten-day-date {
-  font-size: .8rem;
+.seven-hour-section{
+  padding: .9rem;
 }
 
+.ten-day-high,
+.ten-day-low{
+  font-size: .7rem;
+  display: inline;
+}
+
+.ten-day-low{
+  color: grey;
+}
+
+.seven-hour-icon,
 .ten-day-icon {
-  width: 3rem;
+  width: 2rem;
 }
 
-/* ---------------------seven hour */
 
-.seven-hour-weather {
-  background-color: rgba(2, 2, 8, 0.849);
-  display: flex;
-  font-size: .9rem;
-  justify-content: space-around;
-}
-
-/* ----------------------------Nicks Special Logo */
+/* ----------------------------🦄 */
 
 .fa-github{
   font-size: 3rem;
@@ -177,5 +183,19 @@ body{
   }
   100% {
     filter: hue-rotate(-90deg);
+  }
+}
+
+@media only screen and (max-width: 700px){
+  
+  
+  .welcome-message h1 {
+    font-size: 4rem;
+    font-family: 'Pacifico';
+    margin-top: 15rem;
+  }
+
+  .welcome-message h5{
+    font-size: 1.3rem;
   }
 }

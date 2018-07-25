@@ -53,7 +53,7 @@ class App extends Component {
         SevenHourForecast: res.hourly_forecast,
       })
     })
-    // this needs to be updated and an issue created
+
     .catch(error => {
       // console.log(error)
       // alert('Please enter a valid location')
