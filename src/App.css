@@ -42,6 +42,10 @@ body{
   font-size: 1.5rem;
 }
 
+.weather-conditions{
+  font-size: 1.5rem;
+}
+
 /* ---------------Home / Local Storage */
 
 .fa-home {
@@ -95,6 +99,7 @@ button {
 
 /* ---------------------Hourly/ Daily weather */
 
+
 .seven-hour-button,
 .ten-day-button {
   cursor: pointer;
@@ -130,7 +135,6 @@ button {
 }
 
 .ten-day-weather{
-  background-color: rgba(2, 2, 8, 0.849);
   padding: 1rem;
 }
 
@@ -140,8 +144,12 @@ button {
 
 .ten-day-high,
 .ten-day-low{
-  font-size: .8rem;
+  font-size: .7rem;
   display: inline;
+}
+
+.ten-day-low{
+  color: grey;
 }
 
 .seven-hour-icon,
@@ -186,5 +194,4 @@ button {
   .welcome-message h5{
     font-size: 1.3rem;
   }
-  
 }
