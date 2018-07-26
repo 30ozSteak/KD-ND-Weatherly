@@ -9,6 +9,7 @@
 body{
   background: url(https://source.unsplash.com/collection/2392608/1600x900);
   text-align: center;
+  overflow: hidden;
 }
 
 /* ----------------------------Welcome */
@@ -41,7 +42,7 @@ body{
 }
 
 .current-temp {
-  font-size: 10rem;
+  font-size: 7rem;
 }
 
 .current-bottom-row {
@@ -128,11 +129,13 @@ button {
   background-color: rgba(2, 2, 8, 0.849);
 }
 
-.seven-hour-temp,
-.ten-day-date{
+.seven-hour-temp{
   padding-bottom: 1.5rem;
 }
 
+.ten-day-date{
+  padding-bottom: .5rem;
+}
 
 .ten-day-card {
   align-items: center;
@@ -145,7 +148,7 @@ button {
 }
 
 .seven-hour-section{
-  padding: .9rem;
+  padding: .8rem;
 }
 
 .ten-day-high,
@@ -160,7 +163,7 @@ button {
 
 .seven-hour-icon,
 .ten-day-icon {
-  width: 2rem;
+  width: 3rem;
 }
 
 /* ----------------------------🦄 */
