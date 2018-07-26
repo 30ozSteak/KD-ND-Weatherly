@@ -7,7 +7,7 @@ describe('CurrentWeather', () => {
   
   
   beforeEach(() => {
-    wrapper = shallow(<CurrentWeather weather = { {} }/>);
+    wrapper = shallow(<CurrentWeather weather = { {icon: 'sleet'} }/>);
   })
 
   it('should exist', () => {
