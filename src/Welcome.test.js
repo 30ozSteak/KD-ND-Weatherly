@@ -12,11 +12,7 @@ describe('Welcome', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should render a message welcoming the user to the page', () => {
+  it('should render a lovely message welcoming the user to the app', () => {
     expect(wrapper.find('h1').length).toEqual(1);
-  });
-
-  it('should display a link to the Github repo where this project is saved', () => {
-    expect(wrapper.find('i').length).toEqual(1);
   });
 });
