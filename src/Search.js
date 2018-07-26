@@ -32,45 +32,45 @@ class Search extends Component {
   render(){
     return (
       <form >
-          <input 
-            className = 'search-bar'
-            list = 'cities'
-            type = 'text' 
-            placeholder = 'Search by City/State, Zip - Then Press Enter' 
-            value = { this.state.userInput }
-            onChange={ (e) => {
-              this.getAutoComplete(e.target.value)
-              this.setState( {userInput: e.target.value})
-              }   
-             }
-            />
-          {this.state.showSuggest === true && <datalist id="cities">
-            <option value={this.state.suggest[0]} />
-            <option value={this.state.suggest[1]} />
-            <option value={this.state.suggest[2]} />
-            <option value={this.state.suggest[3]} />
-            <option value={this.state.suggest[4]} />
-            <option value={this.state.suggest[5]} />
-          </datalist>
-          }
-          <button 
-            className = 'magic-button'
-            onClick={(e) => { 
-            e.preventDefault()
-            this.props.setLocation(this.state.userInput)
-            this.setState({
-              userInput: '',
-              showSuggest: false
-            })
-          }}
-          ></button>
-          <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>Hourly</h1> 
-          <i className="fas fa-home"
-            onClick={(e) => {
-            e.preventDefault()
-            this.props.findHome()
-          }}></i>
-          <h1 className="ten-day-button" onClick={this.props.setTenDay}>Daily</h1>
+        <input 
+          className = 'search-bar'
+          list = 'cities'
+          type = 'text' 
+          placeholder = 'Search by City/State, Zip - Then Press Enter' 
+          value = { this.state.userInput }
+          onChange={ (e) => {
+            this.getAutoComplete(e.target.value)
+            this.setState( {userInput: e.target.value})
+          }   
+        }
+        />
+        {this.state.showSuggest === true && <datalist id="cities">
+          <option value={this.state.suggest[0]} />
+          <option value={this.state.suggest[1]} />
+          <option value={this.state.suggest[2]} />
+          <option value={this.state.suggest[3]} />
+          <option value={this.state.suggest[4]} />
+          <option value={this.state.suggest[5]} />
+        </datalist>
+        }
+        <button 
+          className = 'magic-button'
+          onClick={(e) => { 
+          e.preventDefault()
+          this.props.setLocation(this.state.userInput)
+          this.setState({
+            userInput: '',
+            showSuggest: false
+          })
+        }}
+        ></button>
+        <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>Hourly</h1> 
+        <i className="fas fa-home"
+          onClick={(e) => {
+          e.preventDefault()
+          this.props.findHome()
+        }}></i>
+        <h1 className="ten-day-button" onClick={this.props.setTenDay}>Daily</h1>
       </form>
     )
   }

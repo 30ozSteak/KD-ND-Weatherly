@@ -73,7 +73,7 @@ class App extends Component {
           {this.state.showWelcomeMessage = false}
           <CurrentWeather weather={this.state.CurrentWeather}/>
           <Search setLocation={(location) => this.importLocation(location)} 
-          findHome={() =>this.findHome()}
+          findHome={() => this.findHome()}
           setSevenHour={this.setSevenHour} 
           setTenDay={this.setTenDay}/>
           <HomeButton updateLocalStorage={() => this.setLocalStorage(this.state.userLocation)}/>
