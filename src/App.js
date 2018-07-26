@@ -38,7 +38,6 @@ class App extends Component {
 
   componentDidMount() {
     this.importLocation('');
-    showWelcomeMessage: false;
   }
 
   importLocation(location) {
