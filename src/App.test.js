@@ -14,15 +14,16 @@ describe('App', () => {
   })
 
   it('should have a default state', () => {
-    expect(wrapper.state()).toEqual({   userLocation: '',
-                                        time: '',
-                                        date: '',
-                                        CurrentWeather: {},
-                                        SevenHourForecast: [],
-                                        TenDayForecast: [],
-                                        showSevenHour: false,
-                                        showTenDay: false,
-                                        showWelcomeMessage: true, });
+    expect(wrapper.state()).toEqual({   
+      userLocation: '',
+      time: '',
+      date: '',
+      CurrentWeather: {},
+      SevenHourForecast: [],
+      TenDayForecast: [],
+      showSevenHour: false,
+      showTenDay: false,
+      showWelcomeMessage: true, });
   })
 
   it('should render Welcome and Search components', () => {
@@ -58,17 +59,11 @@ describe('App', () => {
     expect(wrapper.state().userLocation).toEqual('Denver')
   })
 
-
-//Test fetch call
-
   it('should load componentDidMount with a default empty string and make a fetch call', () => {
     wrapper = mount(<App />);
 
     expect(wrapper.state().userLocation).toEqual('');
   })
-
-  //
-
 
   it('should display the seven hour forecast', () => {
     expect(wrapper.state().showSevenHour).toEqual(false)
