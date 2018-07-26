@@ -48,22 +48,24 @@ describe('App', () => {
     expect(localStorage.store).toEqual({ "location": "\"denver, CO\"" });
   })
 
-  it('should retrieve location from local storage and add it to the state', () => {
-    localStorage.clear();
+  // it('should retrieve location from local storage and add it to the state', () => {
+  //   localStorage.clear();
  
-    localStorage.setItem(location, 'denver, co' )
-    let localItem = localStorage.getItem('location')
+  //   localStorage.setItem(location, 'denver, co' )
+  //   let localItem = localStorage.getItem('location')
 
 
-    wrapper.setState({userLocation: localItem})
-    expect(wrapper.state().userLocation).toEqual('Denver')
-  })
+  //   wrapper.setState({userLocation: localItem})
+  //   expect(wrapper.state().userLocation).toEqual('Denver')
+  // })
 
   it('should load componentDidMount with a default empty string and make a fetch call', () => {
     wrapper = mount(<App />);
 
     expect(wrapper.state().userLocation).toEqual('');
   })
+
+///////////////////////////
 
   it('should display the seven hour forecast', () => {
     expect(wrapper.state().showSevenHour).toEqual(false)

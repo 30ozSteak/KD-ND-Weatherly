@@ -12,4 +12,8 @@ describe('TenDayForecast', () => {
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   })
+
+  it('should return the information to the card', () => {
+    expect(wrapper.find('div').length).toEqual(1);
+  })
 })
