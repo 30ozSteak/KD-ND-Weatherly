@@ -6,7 +6,7 @@ import Key from './Key';
 import CurrentWeather  from './CurrentWeather';
 import SevenHourForecast from './SevenHourForecast';
 import TenDayForecast from './TenDayForecast';
-import {currWeatherData} from './DataScrape';
+import { currWeatherData } from './DataScrape';
 import HomeButton from './HomeButton';
 
 class App extends Component {
