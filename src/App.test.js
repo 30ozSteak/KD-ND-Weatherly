@@ -48,17 +48,6 @@ describe('App', () => {
     expect(localStorage.store).toEqual({ "location": "\"denver, CO\"" });
   })
 
-  it('should retrieve location from local storage and add it to the state', () => {
-    localStorage.clear();
- 
-    localStorage.setItem('denver, co' )
-    let localItem = localStorage.getItem('location')
-
-
-    wrapper.setState({userLocation: localItem})
-    expect(wrapper.state().userLocation).toEqual('Denver')
-  })
-
   it('should load componentDidMount with a default empty string', () => {
     wrapper = mount(<App />);
 
