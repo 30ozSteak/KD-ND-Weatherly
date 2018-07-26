@@ -9,7 +9,6 @@
 body{
   background: url(https://source.unsplash.com/collection/2392608/1600x900);
   text-align: center;
-  overflow: hidden;
 }
 
 /* ----------------------------Welcome */
@@ -67,8 +66,8 @@ body{
 }
 
 .set-home-button{
-  font-size: 1rem;
-  margin-left: 1rem;
+  font-size: 1.5rem;
+  margin-left: .7rem;
   cursor: pointer;
 }
 
@@ -84,12 +83,10 @@ body{
   border: none;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.438);
   font-size: 1rem;
-  margin-top: 3.3rem;
+  margin-top: 2rem;
   padding: 1rem .5rem;
-  transition: .5s;
   text-align: center;
   width: 20rem;
-  position: relative;
 }
 
 .app input::placeholder{
@@ -108,7 +105,6 @@ button {
 
 /* ---------------------Hourly/ Daily weather */
 
-
 .seven-hour-button,
 .ten-day-button {
   cursor: pointer;
@@ -118,29 +114,30 @@ button {
   text-transform: uppercase;
 }
 
+.seven-hour-button:hover,
+.ten-day-button:hover {
+  color: rgb(50, 163, 255);
+}
+
 .seven-hour-weather,
 .ten-day-weather {
   display: flex;
   font-size: .5rem;
   justify-content: space-around;
   overflow: scroll;
+  background-color: rgba(2, 2, 8, 0.849);
 }
 
-.seven-hour-temp{
+.seven-hour-temp,
+.ten-day-date{
   padding-bottom: 1.5rem;
 }
 
-.seven-hour-button:hover,
-.ten-day-button:hover {
-  color: rgb(206, 206, 206);
-}
 
 .ten-day-card {
   align-items: center;
   font-size: .55rem;
   padding: 0 2rem;
-  background-color: rgba(2, 2, 8, 0.849);
-
 }
 
 .ten-day-weather{
@@ -166,11 +163,10 @@ button {
   width: 2rem;
 }
 
-
 /* ----------------------------🦄 */
 
 .fa-github{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .fa-github:hover{
@@ -178,6 +174,11 @@ button {
   color: rgb(239, 120, 255);
   cursor: pointer;
 }
+
+.welcome-message h5{
+  margin-bottom: 5rem;
+}
+
 
 @keyframes 🦄 {
   0% {
@@ -203,4 +204,17 @@ button {
   .welcome-message h5{
     font-size: 1.3rem;
   }
+}
+
+@media only screen and (max-width: 400px){
+  .seven-hour-weather,
+  .ten-day-weather {
+  padding-left: 1rem;
+}
+
+.seven-hour-section ,
+.ten-day-card {
+  /* padding-left: 3rem; */
+  margin-left: 2.5rem;
+}
 }

@@ -19,7 +19,7 @@ class HomeButton extends Component {
             this.setState({
             })
           }}
-          >Set Home</p>
+          >Set</p>
       </form>
     )
   }
