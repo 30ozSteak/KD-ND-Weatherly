@@ -13,7 +13,7 @@ describe('SevenHourCard', () => {
   })
 
   it('should render to the page properly', () => {
-    const sevenHourCard = wrapper.find('seven-hour-section');
+    const sevenHourCard = wrapper.find('.seven-hour-section');
     const sevenHourCardTime = wrapper.find('.seven-hour-time');
     const sevenHourCardTemp = wrapper.find('.seven-hour-temp');
     const sevenHourCardImg = wrapper.find('.seven-hour-icon');
