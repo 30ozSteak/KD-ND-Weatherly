@@ -15,15 +15,15 @@ describe('App', () => {
 
   it('should have a default state', () => {
     expect(wrapper.state()).toEqual({   
-      userLocation: '',
-      time: '',
-      date: '',
-      CurrentWeather: {},
-      SevenHourForecast: [],
-      TenDayForecast: [],
-      showSevenHour: false,
-      showTenDay: false,
-      showWelcomeMessage: true, });
+                                      userLocation: '',
+                                      time: '',
+                                      date: '',
+                                      CurrentWeather: {},
+                                      SevenHourForecast: [],
+                                      TenDayForecast: [],
+                                      showSevenHour: false,
+                                      showTenDay: false,
+                                      showWelcomeMessage: true, });
   })
 
   it('should render Welcome and Search components', () => {
@@ -48,24 +48,22 @@ describe('App', () => {
     expect(localStorage.store).toEqual({ "location": "\"denver, CO\"" });
   })
 
-  // it('should retrieve location from local storage and add it to the state', () => {
-  //   localStorage.clear();
+  it('should retrieve location from local storage and add it to the state', () => {
+    localStorage.clear();
  
-  //   localStorage.setItem(location, 'denver, co' )
-  //   let localItem = localStorage.getItem('location')
+    localStorage.setItem('denver, co' )
+    let localItem = localStorage.getItem('location')
 
 
-  //   wrapper.setState({userLocation: localItem})
-  //   expect(wrapper.state().userLocation).toEqual('Denver')
-  // })
+    wrapper.setState({userLocation: localItem})
+    expect(wrapper.state().userLocation).toEqual('Denver')
+  })
 
-  it('should load componentDidMount with a default empty string and make a fetch call', () => {
+  it('should load componentDidMount with a default empty string', () => {
     wrapper = mount(<App />);
 
     expect(wrapper.state().userLocation).toEqual('');
   })
-
-///////////////////////////
 
   it('should display the seven hour forecast', () => {
     expect(wrapper.state().showSevenHour).toEqual(false)

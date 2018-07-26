@@ -33,10 +33,6 @@ class App extends Component {
     let location = JSON.parse(localStorage.getItem('location')) || null;
     if (location) {this.importLocation(location)};
   }
-  
-  componentDidMount() {
-    this.importLocation('');
-  }
 
   importLocation(location) {
     const url= `http://api.wunderground.com/api/${Key}/conditions/hourly/forecast10day/q/${location}.json`
@@ -52,8 +48,7 @@ class App extends Component {
     })
 
     .catch(error => {
-      // console.log(error)
-      // alert('Please enter a valid location')
+      alert('Please enter a valid location')
     })
   }
 

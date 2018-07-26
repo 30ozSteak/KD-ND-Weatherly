@@ -39,7 +39,6 @@ class Search extends Component {
             placeholder = 'Search by City/State, Zip - Then Press Enter' 
             value = { this.state.userInput }
             onChange={ (e) => {
-              e.preventDefault()
               this.getAutoComplete(e.target.value)
               this.setState( {userInput: e.target.value})
               }   
@@ -60,7 +59,8 @@ class Search extends Component {
             e.preventDefault()
             this.props.setLocation(this.state.userInput)
             this.setState({
-              userInput: ''
+              userInput: '',
+              showSuggest: false
             })
           }}
           ></button>

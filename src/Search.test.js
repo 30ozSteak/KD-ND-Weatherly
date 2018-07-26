@@ -4,6 +4,7 @@ import Search from './search.js';
 
 describe('Search', () => {
   let search;
+
   beforeEach(() => {
     search = shallow(<Search />);
   });
@@ -33,5 +34,13 @@ describe('Search', () => {
     }
     userInput.simulate('change', event);
     expect(search.state().userInput).toEqual('denver');
+  })
+
+  it('should display autocomplete when user enters a value into the input', () => {
+    expect(search.state().showSuggest).toEqual(false)
+    
+    search.instance().getAutoComplete('denver, co')
+    
+    expect(search.state().showSuggest).toEqual(true)
   })
 });
