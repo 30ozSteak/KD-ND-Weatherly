@@ -10,7 +10,7 @@ const CurrentWeather = (props) => {
         <img className = 'weather-icon' src={require(`./img/${props.weather.icon}.png`)}/>
         <p>Low: { props.weather.low }</p>
       </div>
-      <p class="weather-conditions">{props.weather.conditions}</p>
+      <p className="weather-conditions">{props.weather.conditions}</p>
       </div>
     )
   }
