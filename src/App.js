@@ -33,9 +33,7 @@ class App extends Component {
     let location = JSON.parse(localStorage.getItem('location')) || null;
     if (location) {this.importLocation(location)};
   }
-
-  // Why did we do this again? I know you explained it..
-
+  
   componentDidMount() {
     this.importLocation('');
     showWelcomeMessage: false;
