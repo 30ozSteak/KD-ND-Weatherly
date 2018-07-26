@@ -30,13 +30,13 @@ describe('App', () => {
     expect(wrapper.find('Welcome').length).toEqual(1);
     expect(wrapper.find('Search').length).toEqual(1);
   })
-
+  
   it('should render CurrentWeather and HomeButton instead of Welcome if the user has entered a location', () => {
     wrapper.setState( {userLocation: 'denver, co'} );
-
+    
+    expect(wrapper.find('HomeButton').length).toEqual(1);
     expect(wrapper.find('Welcome').length).toEqual(0);
     expect(wrapper.find('CurrentWeather').length).toEqual(1);
-    expect(wrapper.find('HomeButton').length).toEqual(1);
   })
 
   it('should store a location in local storage', () => {
