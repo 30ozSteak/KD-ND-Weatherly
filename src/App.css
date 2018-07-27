@@ -48,8 +48,8 @@ body{
 
 .current-bottom-row {
   display: flex;
-  justify-content: space-around;
   font-size: 1.5rem;
+  justify-content: space-around;
 }
 
 .weather-conditions {
@@ -75,6 +75,7 @@ body{
 .set-home-button{
   font-size: 1.2rem;
   cursor: pointer;
+  margin-bottom: 1.3rem;
   text-transform: uppercase;
 }
 
@@ -114,13 +115,7 @@ button:hover {
   background-color: rgba(44, 44, 44, 0.767);
 }
 
-button:before {
-  content: '';
-  position: relative;
-}
-
 /* ---------------------Hourly/ Daily weather */
-
 
 .seven-hour-button,
 .ten-day-button {
@@ -190,6 +185,8 @@ button:before {
 
 .fa-github {
   font-size: 2rem;
+  position: relative;
+  top: 18rem;
 }
 
 .fa-github:hover {
@@ -214,6 +211,8 @@ button:before {
     filter: hue-rotate(-90deg);
   }
 }
+
+/* -------------------Media Queries-*/
 
 @media only screen and (max-width: 700px) {
   .welcome-message h1 {
