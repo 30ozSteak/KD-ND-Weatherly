@@ -8,7 +8,6 @@ const Welcome = (props) => {
       <p><span className = 'k'>Kiel</span> <a href="https://github.com/30ozSteak/KD-ND-Weatherly"><i className="fab fa-github"></i></a> Nick</p>
     </div>  
   )
-
 }
 
 export default Welcome;

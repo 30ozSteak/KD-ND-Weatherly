@@ -4,6 +4,7 @@ import SevenHourCard from './SevenHourCard.js'
 
 describe('SevenHourCard', () => {
   let wrapper;
+ 
   beforeEach(() => {
     wrapper = shallow( <SevenHourCard time = "5pm" temp ="9001" icon = "Cloudy" /> )
   });

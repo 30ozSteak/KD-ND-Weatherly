@@ -16,8 +16,4 @@ describe('SevenHourForecast', () => {
   it('should return the information to the card', () => {
     expect(wrapper.find('div').length).toEqual(1);
   })
-
-  // it('should take in properties', () => {
-  //   expect(wrapper.find(test)).toEqual('passing')
-  // })
 })

@@ -11,11 +11,11 @@ const SevenHourForecast = (props) => {
             time={ hour.FCTTIME.civil}
             temp={ hour.temp.english }
             icon={ hour.icon }
-            />
-          )}
+          />
         )}
-      </div>
-    )
-  }
+      )}
+    </div>
+  )
+}
 
 export default SevenHourForecast;

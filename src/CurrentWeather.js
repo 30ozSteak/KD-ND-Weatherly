@@ -11,8 +11,8 @@ const CurrentWeather = (props) => {
         <p>Low: { props.weather.low }</p>
       </div>
       <p className="weather-conditions">{props.weather.conditions}</p>
-      </div>
-    )
-  }
+    </div>
+  )
+}
 
-  export default CurrentWeather;
+export default CurrentWeather;

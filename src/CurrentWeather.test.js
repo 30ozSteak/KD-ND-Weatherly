@@ -5,7 +5,6 @@ import CurrentWeather from './CurrentWeather';
 describe('CurrentWeather', () => {
   let wrapper;
   
-  
   beforeEach(() => {
     wrapper = shallow(<CurrentWeather weather = { {icon: 'sleet'} }/>);
   })

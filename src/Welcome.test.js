@@ -4,6 +4,7 @@ import Welcome from './Welcome.js';
 
 describe('Welcome', () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(<Welcome />);
   });
