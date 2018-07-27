@@ -51,7 +51,11 @@ Man, react was scary to look at, at first. One of the hardest things to wrap my 
 
 Around 1130 on Wedesday I had a GRAND epiphany that react components are just words. Those words are rendered inside the div that houses everything. That div can be gridded. If that div can be gridded, anything can be moved anywhere on the page incredibly easily.  Excited to use this on everything coming next. Looking at the app now that's done, I wish I would have moved the search bar, or make it less obtrusive. This would make restyling the upcoming forecast easier too.
 
+Kiel
+--------------------------
+This was by far the most satisfaction I have personally gotten out of any of my projects thus far in the Turing program. Going into React was certainly intimidating, but it was also an incredibly rewarding experience. Learning modular coding makes the project flow in such an interesting way.  At first it was really hard to wrap my head around exactly how components communicate with each other, but once I actually got into the code and learned how props and actions were passed around it started flowing really easily.
 
+My favorite moment of the project was when I was trying to import my completeMe project into the search bar to actually make it work.  It was one of those moments where you feel like you have no idea what you are doing, but it turns out you know the language well enough that every single thing you try works on the first time. It's cool to grow our vocabularies in a logical way, so that when something new comes along you realize it's just a combination of all the things you already know how to do. All in all this was a great project, and I can't wait to work on more React next mod and beyond.
 
 Fun stuff!
 
