@@ -36,3 +36,10 @@ The icons used in this app came from Weather Underground, but because they were 
 
 The wallpapers in the app are taken from a free, lightweight, URL api from unsplash.com.  It allows you to fetch random images of a certain size/category/hashtag/artist/etc, so we set this to be our backdrop so we'd always have something dynamic and fresh.
 
+#### Growth
+
+This was both Kiel and my own first dive into React, and it posed a lot of new and exciting challenges. About halfway through the project a lot of parts and syntax requirements just clicked, and everything went incredibly smoothly. Neither of us devoted excess hours or lost much sleep. Feels good! We're both very excited to be using React more and more now that we've cleared the initial hurdles of learning a new library.
+
+#### Visit our GHs
+Kiel Denhert - https://github.com/kielzor
+Nick Dambrosio - https://github.com/30ozSteak
