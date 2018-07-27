@@ -45,9 +45,15 @@ The wallpapers in the app are taken from a free, lightweight, URL api from unspl
 
 This was both Kiel and my own first dive into React, and it posed a lot of new and exciting challenges. About halfway through the project a lot of parts and syntax requirements just clicked, and everything went incredibly smoothly. Neither of us devoted excess hours or lost much sleep. Feels good! We're both very excited to be using React more and more now that we've cleared the initial hurdles of learning a new library.
 
-Nick: Man, react was scary to look at, at first. One of the hardest things to wrap my head around was how the items rendered would be positioned on the page. It felt like random luck that ours fell into place the way they did the first time we had code in the editor and I couldn't understand how you would use a tool (like... grid.. for example) on something like components. What would house the grid? Where would it go? I didn't understand.
+Nick
+---------------------------
+Man, react was scary to look at, at first. One of the hardest things to wrap my head around was how the items rendered would be positioned on the page. It felt like random luck that ours fell into place the way they did the first time we had code in the editor and I couldn't understand how you would use a tool (like... grid.. for example) on something like components. What would house the grid? Where would it go? I didn't understand.
 
-Around 1130 on Wedesday I had a GRAND epiphany that react components are just words. Those words are rendered inside the div that houses everything. That div can be gridded. If that div can be gridded, anything can be moved anywhere on the page incredibly easily.  I almost redid the whole site in grid, and still might. Fun stuff!
+Around 1130 on Wedesday I had a GRAND epiphany that react components are just words. Those words are rendered inside the div that houses everything. That div can be gridded. If that div can be gridded, anything can be moved anywhere on the page incredibly easily.  Excited to use this on everything coming next. Looking at the app now that's done, I wish I would have moved the search bar, or make it less obtrusive. This would make restyling the upcoming forecast easier too.
+
+
+
+Fun stuff!
 
 #### Visit our GHs!
 Kiel Dehnert - https://github.com/kielzor
