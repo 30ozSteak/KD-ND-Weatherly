@@ -30,6 +30,9 @@ When approaching this project, we knew we wanted to make something clean, elegan
 
 We used Trello to keep track of our ideas and progress throughout the app and testing. it proved incredibly beneficial for making sure we weren't working on things that the other was, or tasks that were already done. It was super useful when we ran through each line of code and created a card for every component/function/test, and ensured what each one was doing each time.
 
+#### Issues
+We kept a fairly large running list of issues as we progressed through the project. All were closed before the final commit. Nice!
+
 #### Customization
 
 The icons used in this app came from Weather Underground, but because they were downloaded in PNG format, a text-shadow property in CSS wouldn't work, and block-shadow would give the entire icon container a shadow. I had to import all of them into photoshop and add a drop shadow / linear gradient overlay to each icon to ensure they stood out against the backgrounds.
@@ -40,6 +43,6 @@ The wallpapers in the app are taken from a free, lightweight, URL api from unspl
 
 This was both Kiel and my own first dive into React, and it posed a lot of new and exciting challenges. About halfway through the project a lot of parts and syntax requirements just clicked, and everything went incredibly smoothly. Neither of us devoted excess hours or lost much sleep. Feels good! We're both very excited to be using React more and more now that we've cleared the initial hurdles of learning a new library.
 
-#### Visit our GHs
+#### Visit our GHs!
 Kiel Denhert - https://github.com/kielzor
 Nick Dambrosio - https://github.com/30ozSteak
