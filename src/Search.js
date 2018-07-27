@@ -63,15 +63,17 @@ class Search extends Component {
             showSuggest: false
           })
         }}
-        ><i class="fas fa-caret-down"></i>
+        ><i className="fas fa-caret-down"></i>
         </button>
-        <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>Hourly</h1> 
-        <i className="fas fa-home"
-          onClick={(e) => {
-          e.preventDefault()
-          this.props.findHome()
-        }}></i>
-        <h1 className="ten-day-button" onClick={this.props.setTenDay}>Daily</h1>
+        <section className="home-block">
+          <p className="seven-hour-button" onClick={this.props.setSevenHour}>Hourly</p> 
+          <i className="fas fa-home"
+            onClick={(e) => {
+            e.preventDefault()
+            this.props.findHome()
+          }}></i>
+          <p className="ten-day-button" onClick={this.props.setTenDay}>Daily</p>
+        </section>
       </form>
     )
   }

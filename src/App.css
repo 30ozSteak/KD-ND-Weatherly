@@ -43,6 +43,7 @@ body{
 
 .current-temp {
   font-size: 7rem;
+  text-shadow: 3px 3px 3px black;
 }
 
 .current-bottom-row {
@@ -51,11 +52,16 @@ body{
   font-size: 1.5rem;
 }
 
-.weather-conditions{
+.weather-conditions {
   font-size: 1.5rem;
 }
 
 /* ---------------Home / Local Storage */
+
+.home-block{
+  display: block;
+  text-align: center;
+}
 
 .fa-home {
   font-size: 2rem;
@@ -67,9 +73,9 @@ body{
 }
 
 .set-home-button{
-  font-size: 1.5rem;
-  margin-left: .7rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .set-home-button:hover{
@@ -79,7 +85,7 @@ body{
 
 /* ----------------------------search */
 
-.search-bar{
+.search-bar {
   background-color: rgba(0, 0, 0, 0.767);
   border: none;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.438);
@@ -90,32 +96,43 @@ body{
   width: 20rem;
 }
 
-.app input::placeholder{
+.app input::placeholder {
   color: rgb(179, 179, 179);
 }
 
 button {
   background-color: rgba(0, 0, 0, 0.767);
   border: none;
-  font-size: 1rem;
-  padding: 1rem;
   border-left: 3px solid rgb(50, 163, 255);
+  font-size: 1rem;
+  display: inline-block;
+  padding: 1rem;
 }
 
-button i:hover{
+button:hover {
   cursor: pointer;
-  color: rgb(50, 163, 255);
-  
+  background-color: rgba(44, 44, 44, 0.767);
+}
+
+button:before {
+  content: '';
+  position: relative;
 }
 
 /* ---------------------Hourly/ Daily weather */
+
 
 .seven-hour-button,
 .ten-day-button {
   cursor: pointer;
   font-size: 1rem;
-  padding: 3rem;
+  padding: 1.5rem;
   text-transform: uppercase;
+  display: inline-block;
+}
+
+.ten-day-button {
+  padding-left: 2.5rem;
 }
 
 .seven-hour-button:hover,
@@ -132,11 +149,11 @@ button i:hover{
   background-color: rgba(2, 2, 8, 0.849);
 }
 
-.seven-hour-temp{
+.seven-hour-temp {
   padding-bottom: 1.5rem;
 }
 
-.ten-day-date{
+.ten-day-date {
   padding-bottom: .5rem;
 }
 
@@ -146,21 +163,21 @@ button i:hover{
   padding: 0 2rem;
 }
 
-.ten-day-weather{
+.ten-day-weather {
   padding: 1rem;
 }
 
-.seven-hour-section{
+.seven-hour-section {
   padding: .8rem;
 }
 
 .ten-day-high,
-.ten-day-low{
+.ten-day-low {
   font-size: .7rem;
   display: inline;
 }
 
-.ten-day-low{
+.ten-day-low {
   color: grey;
 }
 
@@ -171,17 +188,17 @@ button i:hover{
 
 /* ----------------------------🦄 */
 
-.fa-github{
+.fa-github {
   font-size: 2rem;
 }
 
-.fa-github:hover{
+.fa-github:hover {
   animation: 🦄 3s linear infinite;
   color: rgb(239, 120, 255);
   cursor: pointer;
 }
 
-.welcome-message h5{
+.welcome-message h5 {
   margin-bottom: 5rem;
 }
 
@@ -198,9 +215,7 @@ button i:hover{
   }
 }
 
-@media only screen and (max-width: 700px){
-  
-  
+@media only screen and (max-width: 700px) {
   .welcome-message h1 {
     font-size: 4rem;
     font-family: 'Pacifico';
@@ -212,15 +227,14 @@ button i:hover{
   }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 400px) {
   .seven-hour-weather,
   .ten-day-weather {
   padding-left: 1rem;
 }
 
-.seven-hour-section ,
-.ten-day-card {
-  /* padding-left: 3rem; */
+  .seven-hour-section ,
+  .ten-day-card {
   margin-left: 2.5rem;
 }
 }
