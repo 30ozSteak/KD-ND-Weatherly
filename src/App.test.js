@@ -15,15 +15,15 @@ describe('App', () => {
 
   it('should have a default state', () => {
     expect(wrapper.state()).toEqual({   
-                                      userLocation: '',
-                                      time: '',
-                                      date: '',
-                                      CurrentWeather: {},
-                                      SevenHourForecast: [],
-                                      TenDayForecast: [],
-                                      showSevenHour: false,
-                                      showTenDay: false,
-                                      showWelcomeMessage: true, });
+      userLocation: '',
+      time: '',
+      date: '',
+      CurrentWeather: {},
+      SevenHourForecast: [],
+      TenDayForecast: [],
+      showSevenHour: false,
+      showTenDay: false,
+      showWelcomeMessage: true, });
   })
 
   it('should render Welcome and Search components', () => {

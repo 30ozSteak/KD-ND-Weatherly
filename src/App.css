@@ -95,10 +95,8 @@ body{
 }
 
 button {
-  background: none;
+  background-color: rgba(0, 0, 0, 0.767);
   border: none;
-  border-radius: 50px;
-  display: block;
   font-size: 2rem;
   height: 3rem;
   width: 3rem;
@@ -109,7 +107,6 @@ button {
 .seven-hour-button,
 .ten-day-button {
   cursor: pointer;
-  display: inline;
   font-size: 1rem;
   padding: 3rem;
   text-transform: uppercase;

@@ -63,7 +63,8 @@ class Search extends Component {
             showSuggest: false
           })
         }}
-        ></button>
+        ><i class="fas fa-caret-down"></i>
+        </button>
         <h1 className="seven-hour-button" onClick={this.props.setSevenHour}>Hourly</h1> 
         <i className="fas fa-home"
           onClick={(e) => {
