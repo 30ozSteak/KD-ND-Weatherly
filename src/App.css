@@ -62,7 +62,7 @@ body{
 }
 
 .fa-home:hover {
-  color: rgb(226, 226, 226);
+  color: rgb(50, 163, 255);
   cursor: pointer;
 }
 
@@ -97,9 +97,15 @@ body{
 button {
   background-color: rgba(0, 0, 0, 0.767);
   border: none;
-  font-size: 2rem;
-  height: 3rem;
-  width: 3rem;
+  font-size: 1rem;
+  padding: 1rem;
+  border-left: 3px solid rgb(50, 163, 255);
+}
+
+button i:hover{
+  cursor: pointer;
+  color: rgb(50, 163, 255);
+  
 }
 
 /* ---------------------Hourly/ Daily weather */
