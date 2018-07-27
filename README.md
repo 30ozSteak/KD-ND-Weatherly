@@ -25,8 +25,6 @@ When approaching this project, we knew we wanted to make something clean, elegan
 
 ![232857c8aebd5de35625e3e81182b771](https://user-images.githubusercontent.com/34214595/43302774-d483f60c-9129-11e8-90e7-33ac0901de10.jpg)
 
-![37915567_10160576477540526_6268840360076640256_n](https://user-images.githubusercontent.com/34214595/43302644-00b746bc-9129-11e8-8a29-5836ef8edbd8.png)
-
 #### Project Management
 
 <img width="1440" alt="screen shot 2018-07-26 at 11 33 31 pm" src="https://user-images.githubusercontent.com/34214595/43303304-64767c42-912c-11e8-91fc-360fcb0259e8.png">
@@ -42,6 +40,7 @@ The icons used in this app came from Weather Underground, but because they were 
 
 ![37788748_10160576477695526_7969334585349636096_n](https://user-images.githubusercontent.com/34214595/43302653-05eebeb2-9129-11e8-910b-3b89acce4dad.png)
 
+![37915567_10160576477540526_6268840360076640256_n](https://user-images.githubusercontent.com/34214595/43302644-00b746bc-9129-11e8-8a29-5836ef8edbd8.png)
 
 The wallpapers in the app are taken from a free, lightweight, URL api from unsplash.com.  It allows you to fetch random images of a certain size/category/hashtag/artist/etc, so we set this to be our backdrop so we'd always have something dynamic and fresh.
 
