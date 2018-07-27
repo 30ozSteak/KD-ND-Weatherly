@@ -3,13 +3,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Weatherly
 
-#### Made with love by Kiel Denhert and Nick Dambrosio
+Kiel Dehnert / Nick Dambrosio
 
-Weatherly is a fast, simplistic, real-time weather app that provides the current / 7-hour / 10-day forecast for a specified city. The user can set their home location to quickly view the weather in their area. It was built using the Create React App and uses the Weather Underground API for it's data.
+Weatherly is a fast, simplistic, real-time weather app that provides the current / 7-hour / 10-day forecast for a specified city. The user can set their home location to quickly view the weather in their area. It was built using the Create React App and uses the Weather Underground API for it's data. The wallpapers are courtesy of Unsplash Source.
 
 
-![weatherly1](https://user-images.githubusercontent.com/34214595/43304816-bd3d2e38-9132-11e8-8aa2-b4f12725593f.png)
-![weatherly3](https://user-images.githubusercontent.com/34214595/43304833-cd04823a-9132-11e8-9278-ef3d9158397f.png)
+![weatherly1](https://user-images.githubusercontent.com/34214595/43305130-c40890b2-9133-11e8-96de-cd5d1d554524.png)
+![weatherly3](https://user-images.githubusercontent.com/34214595/43305122-bf0143f2-9133-11e8-94d1-f8fad053ee21.png)
 
 #### Design
 
@@ -50,5 +50,5 @@ Nick: Man, react was scary to look at, at first. One of the hardest things to wr
 Around 1130 on Wedesday I had a GRAND epiphany that react components are just words. Those words are rendered inside the div that houses everything. That div can be gridded. If that div can be gridded, anything can be moved anywhere on the page incredibly easily.  I almost redid the whole site in grid, and still might. Fun stuff!
 
 #### Visit our GHs!
-Kiel Denhert - https://github.com/kielzor
+Kiel Dehnert - https://github.com/kielzor
 Nick Dambrosio - https://github.com/30ozSteak
