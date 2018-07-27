@@ -22,6 +22,9 @@ When approaching this project, we knew we wanted to make something clean, elegan
 
 ![theweatherapp](https://user-images.githubusercontent.com/34214595/43302773-d3e1d89a-9129-11e8-895f-f104250c2d10.jpg)
 
+
+#### Inspiration
+
 ![232857c8aebd5de35625e3e81182b771](https://user-images.githubusercontent.com/34214595/43302774-d483f60c-9129-11e8-90e7-33ac0901de10.jpg)
 
 ![37915567_10160576477540526_6268840360076640256_n](https://user-images.githubusercontent.com/34214595/43302644-00b746bc-9129-11e8-8a29-5836ef8edbd8.png)
