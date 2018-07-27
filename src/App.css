@@ -141,7 +141,7 @@ button:hover {
   font-size: .5rem;
   justify-content: space-around;
   overflow: scroll;
-  background-color: rgba(2, 2, 8, 0.849);
+  background-color: rgba(2, 2, 8, 0.664);
 }
 
 .seven-hour-temp {
