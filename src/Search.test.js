@@ -43,4 +43,6 @@ describe('Search', () => {
     
     expect(search.state().showSuggest).toEqual(true)
   })
+
+  // another test: are we getting the amount of options that is in our suggest method
 });

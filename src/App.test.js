@@ -48,11 +48,11 @@ describe('App', () => {
     expect(localStorage.store).toEqual({ "location": "\"denver, CO\"" });
   })
 
-  it('should load componentDidMount with a default empty string', () => {
-    wrapper = mount(<App />);
+  // it('should load componentDidMount with a default empty string', () => {
+  //   wrapper = mount(<App />);
 
-    expect(wrapper.state().userLocation).toEqual('');
-  })
+  //   expect(wrapper.state().userLocation).toEqual('');
+  // })
 
   it('should display the seven hour forecast', () => {
     expect(wrapper.state().showSevenHour).toEqual(false)
@@ -61,7 +61,8 @@ describe('App', () => {
 
     expect(wrapper.state().showSevenHour).toEqual(true)
   })
-
+// test some rendering in here as well. find a card with a class of 10 day / 7 hour 
+// pair w laura / cody and steal their tests. "They did a really good job testing"
   it('shoud display the ten day forecast', () => {
     expect(wrapper.state().showTenDay).toEqual(false)
 

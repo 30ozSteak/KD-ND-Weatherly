@@ -53,6 +53,7 @@ class Search extends Component {
           <option value={this.state.suggest[5]} />
         </datalist>
         }
+        {/* suggest could be suggestions, its a list of things. And we could have mapped over the array. lot less code */}
         <button 
           className = 'magic-button'
           onClick={(e) => { 
@@ -63,7 +64,7 @@ class Search extends Component {
             showSuggest: false
           })
         }}
-        ><i className="fas fa-caret-down"></i>
+        ><i className="fas fa-caret-right"></i>
         </button>
         <section className="home-block">
           <p className="seven-hour-button" onClick={this.props.setSevenHour}>Hourly</p> 
